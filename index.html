@@ -5,7 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Tab Icon -->
+  <link rel="shortcut icon" href="img//backgrounds//LJIcon.ico">
   <title>Liam Jones</title>
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -19,22 +23,52 @@
 
   <style media="screen">
     .jumbotronStyle {
-      background-image: url(img//backgrounds//Liam-Jones-Copy.jpg);
+      background-image: url(img//backgrounds//Liam-Jones-Copy.jpg) ;
       background-size: cover;
+      background-attachment: fixed;
+background-position: center;
 
-      /* filter: blur(2px); */
+      min-height:90vh;
+
+      -webkit-box-shadow: 0 10px 6px -6px #777;
+      -moz-box-shadow: 0 10px 6px -6px #777;
+        box-shadow: 0 10px 6px -6px #777;
     }
+
+    .rgba-stylish-strong {
+      min-height: 90vh;
+    }
+
     .jumbotronStyle h1 {
       font-size: 3.5rem;
       /* font-family: "Patua One"; */
       font-family: "Nova Square";
 
-      padding-bottom: 0.1em;
+      /* padding-bottom: 0.1em; */
     }
 
     .jumbotronStyle p {
       font-size: 2rem;
       font-family: "Poiret One";
+    }
+
+    section {
+      padding: 8em 2em;
+    }
+
+    .sectionTitle {
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    .noselect {
+      -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                      supported by Chrome and Opera */
     }
   </style>
 
@@ -44,25 +78,55 @@
 
   <!-- Start your project here-->
   <!-- Jumbotron -->
-  <div class="card card-image jumbotronStyle">
+  <div class="card card-image jumbotronStyle noselect">
     <div class="text-white text-center rgba-stylish-strong py-5 px-4">
       <div class="py-5">
-
         <!-- Content -->
-        <!-- <h5 class="h5 orange-text"><i class="fas fa-camera-retro"></i> Photography</h5> -->
         <br>
-        <h1 class="card-title h2 my-4 py-2"><strong>Liam A. Jones</strong></h1>
+        <h1 class="card-title h2 my-4 py-2">Liam A. Jones</h1>
         <p class="mb-4 pb-2 px-md-5 mx-md-5">Junior Computer Scientist</p>
         <br>
         <p class="mb-4 pb-2 px-md-5 mx-md-5"  id="quoteBoard"></p>
         <br>
         <br>
-        <br>
-        <!-- <a class="btn peach-gradient"><i class="fas fa-clone left"></i> View project</a> -->
 
+        <div class="row justify-content-center">
+          <div class="col-sm-2"> <a class="btn-floating btn-lg purple-gradient" href="https://github.com/neptuniam"><i class="fab fa-github"></i> Github</a> </div>
+          <div class="col-sm-2"> <a class="btn-floating btn-lg purple-gradient" href="resume.html"><i class="fas fa-file-invoice"></i> Resume</a> </div>
+          <div class="col-sm-2"> <a class="btn-floating btn-lg purple-gradient" href="mailto:ljones1997@hotmail.com"><i class="far fa-envelope"></i></i> Email</a> </div>
+        </div>
+
+        <br>
+        <br>
       </div>
     </div>
   </div>
+
+  <section class="row" style="background: white;">
+    <div class="col-sm sectionTitle"><h2>All About Me</h2></div>
+  </section>
+
+  <section class="row" style="background: rgb(217, 217, 217);">
+    <div class="col-sm sectionTitle"><h2>Education</h2></div>
+  </section>
+
+  <section class="row" style="background: white;">
+    <div class="col-sm sectionTitle"><h2>Resume</h2></div>
+  </section>
+
+  <section class="row" style="background: rgb(217, 217, 217);">
+    <div class="col-sm sectionTitle"><h2>Skills</h2></div>
+  </section>
+
+  <section class="row" style="background: white;">
+    <div class="col-sm sectionTitle"><h2>Projects</h2></div>
+  </section>
+
+  <section class="row" style="background: rgb(217, 217, 217);">
+    <div class="col-sm sectionTitle"><h2>Contact Info</h2></div>
+  </section>
+
+
   <!-- Jumbotron -->
   <!-- /Start your project here-->
 
@@ -78,7 +142,7 @@
 
   <script>
     function setQuality() {
-      var qualities = ['Funny', 'Smart', 'Motivated', 'Adaptable', 'Ambitious', 'Considerate', 'Patient', 'Creative']
+      var qualities = ['Funny', 'Educated', 'Motivated', 'Adaptable', 'Ambitious', 'Considerate', 'Patient', 'Creative']
       var qualityIndex = Math.floor((Math.random() * qualities.length));
 
       document.getElementById('quoteBoard').innerHTML = "I Am: " + qualities[qualityIndex];
