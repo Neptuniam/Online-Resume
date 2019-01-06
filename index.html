@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
+  <title>Liam Jones</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -14,34 +14,56 @@
   <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Faster+One|Katibeh|Nova+Square|Patua+One|Poiret+One" rel="stylesheet">
+
+  <style media="screen">
+    .jumbotronStyle {
+      background-image: url(img//backgrounds//Liam-Jones-Copy.jpg);
+      background-size: cover;
+
+      /* filter: blur(2px); */
+    }
+    .jumbotronStyle h1 {
+      font-size: 3.5rem;
+      /* font-family: "Patua One"; */
+      font-family: "Nova Square";
+
+      padding-bottom: 0.1em;
+    }
+
+    .jumbotronStyle p {
+      font-size: 2rem;
+      font-family: "Poiret One";
+    }
+  </style>
+
 </head>
 
 <body>
 
   <!-- Start your project here-->
-  <!--Card-->
-  <div class="card m-5" style="width: 22rem;">
+  <!-- Jumbotron -->
+  <div class="card card-image jumbotronStyle">
+    <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+      <div class="py-5">
 
-    <!--Card image-->
-    <div class="view overlay">
-      <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
-      <a href="#">
-        <div class="mask rgba-white-slight"></div>
-      </a>
+        <!-- Content -->
+        <!-- <h5 class="h5 orange-text"><i class="fas fa-camera-retro"></i> Photography</h5> -->
+        <br>
+        <h1 class="card-title h2 my-4 py-2"><strong>Liam A. Jones</strong></h1>
+        <p class="mb-4 pb-2 px-md-5 mx-md-5">Junior Computer Scientist</p>
+        <br>
+        <p class="mb-4 pb-2 px-md-5 mx-md-5"  id="quoteBoard"></p>
+        <br>
+        <br>
+        <br>
+        <!-- <a class="btn peach-gradient"><i class="fas fa-clone left"></i> View project</a> -->
+
+      </div>
     </div>
-
-    <!--Card content-->
-    <div class="card-body">
-      <!--Title-->
-      <h4 class="card-title">Card title</h4>
-      <!--Text-->
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <a href="#" class="btn btn-primary">Button</a>
-    </div>
-
   </div>
-  <!--/.Card-->
+  <!-- Jumbotron -->
   <!-- /Start your project here-->
 
   <!-- SCRIPTS -->
@@ -53,6 +75,17 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-</body>
 
+  <script>
+    function setQuality() {
+      var qualities = ['Funny', 'Smart', 'Motivated', 'Adaptable', 'Ambitious', 'Considerate', 'Patient', 'Creative']
+      var qualityIndex = Math.floor((Math.random() * qualities.length));
+
+      document.getElementById('quoteBoard').innerHTML = "I Am: " + qualities[qualityIndex];
+    }
+
+    setQuality();
+    setInterval(function() { setQuality(); }, 5000);
+  </script>
+</body>
 </html>
