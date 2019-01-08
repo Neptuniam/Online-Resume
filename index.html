@@ -551,7 +551,7 @@
           </small>
         </footer>
       </div> -->
-      <section class="my-5" style="padding-top: 0.25rem;">
+      <section class="my-5" style="padding: 0.25rem 1rem 0.25rem;">
         <h2 class="h1-responsive font-weight-bold text-center my-5 sectionTitle">Projects</h2>
         <div class="wow fadeInUp" data-wow-delay="0.3s" id="projectList">
           <p class="text-center w-responsive mx-auto mb-5">
@@ -647,10 +647,10 @@
     }
 
     function buildImageDiv(icon, projectName) {
-      var newProject = "<div class=\"col-lg-5\"><div class=\"view overlay rounded z-depth-2 mb-lg-0 mb-4\"><img class=\"img-fluid\" src=\"";
+      var newProject = "<div class=\"col-lg-5\"><div class=\"view overlay rounded z-depth-2 mb-lg-0 mb-4\"><img class=\"img-fluid\" style=\"min-height: 300px;\" src=\"";
 
       // TODO: FIX ME DEAR GOD.
-      if (projectName == 'homepage134' || projectName == 'Online-Resume' || projectName == 'Flight-Checker')
+      if (projectName == 'Personal-Homepage' || projectName == 'Online-Resume' || projectName == 'Flight-Checker' || projectName == 'Remindly-V2.0' || projectName == 'Generic-Linked-List')
         newProject += icon + "\" alt=\"Sample image\"><a href=\"" + icon + "\" target=\"_blank\">";
       else
         newProject += "img/projectImages/default.PNG\" alt=\"Sample image\"><a>";
@@ -683,25 +683,30 @@
             if (projectIndex % 2 == 0)
               newProject += buildImageDiv(icon, response[projectIndex].name);
 
-            newProject += "<div class=\"col-lg-7\"><a href=\"#!\" class=\"" + colours[projectIndex] + "-text\"><h6 class=\"font-weight-bold mb-3\"><i class=\"fas fa-utensils pr-2\"></i>";
+            newProject += "<div class=\"col-lg-7\"><a href=\"#!\" class=\"" + colours[projectIndex] + "-text\"><h6 class=\"font-weight-bold mb-3\">";
 
-            // If the project has a homepage link, it is a web based project
-            if (response[projectIndex].homepage)
-              newProject += "Web";
+            if (response[projectIndex].name.includes("crawler"))
+              newProject += "<i class=\"fas fa-file-code pr-2\"></i>Web Util";
+            else if (response[projectIndex].homepage)
+              newProject += "<i class=\"fab fa-html5 pr-2\"></i>Web";
+            else if(response[projectIndex].name.includes("Remindly"))
+              newProject += "<i class=\"fab fa-android pr-2\"></i>Android";
             else
-              newProject += "CLI";
+              newProject += "<i class=\"fas fa-code pr-2\"></i>CLI";
 
             newProject += "</h6></a><h3 class=\"font-weight-bold mb-3\"><strong>" + response[projectIndex].name;
 
             if (response[projectIndex].homepage)
-              newProject += " - <a href=\"" + response[projectIndex].homepage + "\" target=\"_blank\">See me on online!</a>";
+              newProject += " - <a href=\"" + response[projectIndex].homepage + "\" target=\"_blank\">See me online!</a>";
 
             newProject += "</strong></h3>";
 
             if (response[projectIndex].name == "Remindly-V2.0")
-              newProject += "<p>Open Source Android App Development in a group of 4 in Agile Software Engineering practices. Added several features like: Daily Agenda, Location services, Priority, Types, and Sorting.<br></p>";
+              newProject += "<p>Open Source Android App Development in a team using Agile Software Development practices adding several new features.<br><br>Features Including: <ul><li>Daily Agenda</li><li>Location Services</li><li>Priority Specifications</li><li>Reminder Types</li><li>Sorting</li></ul><br></p>";
             else
               newProject += "<p>" + response[projectIndex].description + "</p>";
+
+            newProject += "<p>Primary Language: " + response[projectIndex].language + "</p>";
 
             newProject += "<p style=\"font-size: 0.85rem; position: absolute; bottom: 35px;\">Started on: <a>" + response[projectIndex].created_at + "</a></p>";
 
