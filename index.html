@@ -653,7 +653,7 @@
       if (projectName == 'homepage134' || projectName == 'Online-Resume' || projectName == 'Flight-Checker')
         newProject += icon + "\" alt=\"Sample image\"><a href=\"" + icon + "\" target=\"_blank\">";
       else
-        newProject += "img//project Images//default.png\" alt=\"Sample image\"><a>";
+        newProject += "img//projectImages//default.png\" alt=\"Sample image\"><a>";
 
       newProject += "<div class=\"mask rgba-white-slight\"></div></a></div></div>";
 
@@ -675,23 +675,13 @@
           var colours = ['blue', 'green', 'red' , 'indigo', 'orange', 'purple', 'teal', 'lime', 'cyan'];
 
           for (var projectIndex = 0; projectIndex < response.length; projectIndex++) {
-            var icon = "img//project Images//" + response[projectIndex].name + ".png";
+            var icon = "img//projectImages//" + response[projectIndex].name + ".png";
 
             var newProject = "<div class=\"row\">";
 
             // If even index, add image to left of screen
-            if (projectIndex % 2 == 0) {
+            if (projectIndex % 2 == 0)
               newProject += buildImageDiv(icon, response[projectIndex].name);
-              // newProject += "<div class=\"col-lg-5\"><div class=\"view overlay rounded z-depth-2 mb-lg-0 mb-4\"><img class=\"img-fluid\" src=\"";
-              //
-              // // TODO: FIX ME DEAR GOD.
-              // if (response[projectIndex].name == 'homepage134' || response[projectIndex].name == 'Online-Resume' || response[projectIndex].name == 'Flight-Checker')
-              //   newProject += icon + "\" alt=\"Sample image\"><a href=\"" + icon + "\" target=\"_blank\">";
-              // else
-              //   newProject += "img//project Images//default.png\" alt=\"Sample image\"><a>";
-              //
-              // newProject += "<div class=\"mask rgba-white-slight\"></div></a></div></div>";
-            }
 
             newProject += "<div class=\"col-lg-7\"><a href=\"#!\" class=\"" + colours[projectIndex] + "-text\"><h6 class=\"font-weight-bold mb-3\"><i class=\"fas fa-utensils pr-2\"></i>";
 
@@ -718,18 +708,8 @@
             newProject += "<a class=\"btn btn-md\" style=\"position: absolute; bottom: 0; background-color: " + colours[projectIndex] + "\" href=\"" + response[projectIndex].html_url + "\" target=\"_blank\"\>Check out on Github!</a></div>";
 
             // If odd index, ad the image to the right side of the screen
-            if (projectIndex % 2 == 1) {
+            if (projectIndex % 2 == 1)
               newProject += buildImageDiv(icon, response[projectIndex].name);
-              // newProject += "<div class=\"col-lg-5\"><div class=\"view overlay rounded z-depth-2 mb-lg-0 mb-4\"><img class=\"img-fluid\" src=\"";
-              //
-              // // TODO: FIX ME DEAR GOD.
-              // if (response[projectIndex].name == 'homepage134' || response[projectIndex].name == 'Online-Resume' || response[projectIndex].name == 'Flight-Checker')
-              //   newProject += icon + "\" alt=\"Sample image\"><a href=\"" + icon + "\" target=\"_blank\">";
-              // else
-              //   newProject += "img//project Images//default.png\" alt=\"Sample image\"><a>";
-              //
-              // newProject += "<div class=\"mask rgba-white-slight\"></div></a></div></div>";
-            }
 
             newProject += "</div></div></div><hr class=\"my-5\">";
 
