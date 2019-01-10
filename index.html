@@ -21,7 +21,7 @@
 
   <script src="https://code.jquery.com/jquery-latest.js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Faster+One|Katibeh|Nova+Square|Patua+One|Poiret+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Faster+One|Katibeh|Nova+Square|Patua+One|Poiret+One|Roboto+Condensed" rel="stylesheet">
 
   <style media="screen">
     /* *{
@@ -47,10 +47,7 @@
 
     .jumbotronStyle h1 {
       font-size: 3.5rem;
-      /* font-family: "Patua One"; */
       font-family: "Nova Square";
-
-      /* padding-bottom: 0.1em; */
     }
 
     .jumbotronStyle p {
@@ -59,7 +56,7 @@
     }
 
     section {
-      padding: 8em 2em;
+      padding: 6em 2em;
       v-index: 1000;
     }
 
@@ -67,7 +64,7 @@
       background: rgba(217, 217, 217, 0.4);
     }
 
-    .sectionTitle {
+    section h2 {
       text-align: center;
       text-decoration: underline;
 
@@ -75,33 +72,74 @@
       font-family: "Patua One";
     }
 
-    p {
+    /* Used for name/location headers */
+    section h5 {
+      font-family: Katibeh;
+      font-weight: bold;
+    }
+
+    section p {
+      font-family: "Roboto Condensed";
       font-size: 1.5rem;
+      color: gray;
     }
 
-    .scrollspy-example {
-      height: 360px;
+    .avatar {
+       width: 15em;
+       margin: auto;
+       padding: 20px;
+     }
+
+     #quote {
+       padding-bottom: 0;
+       font-size: 0.8rem;
+       color: white;
+     }
+
+     #skillsBody h3 {
+       color: navy;
+       font-weight: bold;
+
+       padding-top: 1.2rem;
+     }
+
+     .AofFList {
+       font-family: "Roboto Condensed";
+       font-size: 1.5rem;
+       color: gray;
+     }
+
+     .AofFLeft  {
+       list-style-type: none;
+       padding-right: 2px;
+       text-align: right;
+     }
+
+     .AofFRight {
+       list-style-type: none;
+       padding-left: 0px;
+       text-align: left;
+     }
+
+     #bodySubTitle {
+       padding: 0.8em 0 3em;
+       text-align: center;
+     }
+
+    .accordion {
+      /* max-width: 700px; */
+      width: 700px;
     }
 
-    .accordionStyle {
-      /* max-width: 1rem; */
-      /* padding: 0.1rem;
-      background-color: #4285F4; */
+    .card-header h4 {
+      font-family: "Roboto Condensed";
+      /* font-size: 2rem; */
+      /* padding: 1em 0 1em; */
+      /* position: relative; */
+      /* height: 5vh; */
+      /* bottom: 15px; */
+      /* background-color: black; */
     }
-
-    .collapseStyle {
-      max-width:50rem;
-      /* background-color: #0D47A1; */
-    }
-    collapse {
-      max-width:50rem;
-    }
-
-    /* html, body {
-       max-width: 100%;
-       overflow-y: hidden;
-       overflow: auto;
-   } */
 
     .noselect {
       -webkit-touch-callout: none; /* iOS Safari */
@@ -131,7 +169,7 @@
         <br>
 
         <div class="row justify-content-center">
-          <div class="col-sm-2"> <a class="btn-floating btn-lg winter-neva-gradient" href="https://github.com/neptuniam"><i class="fab fa-github"></i> Github</a> </div>
+          <div class="col-sm-2"> <a class="btn-floating btn-lg winter-neva-gradient" href="https://github.com/neptuniam" target="_blank"><i class="fab fa-github"></i> Github</a> </div>
           <div class="col-sm-2"> <a class="btn-floating btn-lg winter-neva-gradient" href="resume.html" target="_blank"><i class="fas fa-file-invoice"></i> Resume</a> </div>
           <div class="col-sm-2"> <a class="btn-floating btn-lg winter-neva-gradient" href="mailto:ljones1997@hotmail.com"><i class="far fa-envelope"></i></i> Email</a> </div>
         </div>
@@ -143,336 +181,340 @@
   </div>
 
   <!-- About Me Section -->
-  <section class="text-center my-5 wow fadeInUp" data-wow-delay="0.3s" style="padding: 2em 2em;" id="about">
-    <!-- <div class="sectionTitle"><h2>All About Me</h2></div> -->
-    <h2 class="h1-responsive font-weight-bold my-5 sectionTitle"> All About Me</h2>
+  <section class="text-center wow fadeInUp" data-wow-delay="0.2s" id="about">
+    <!-- About Me title -->
+    <h2 class="sectionTitle">All About Me!</h2>
 
-    <div class="testimonial wow fadeInUp" data-wow-delay="0.3s">
-      <!--Avatar-->
-      <div class="avatar mx-auto mb-4">
-        <img src="img//backgrounds//avatar-Liam.jpeg" class="rounded-circle img-fluid" style="width:15em;"
-          alt="First sample avatar image">
-      </div>
-      <!--Content-->
-      <p>
-        Hi! I'm a fourth year student at the Univeristy of Guelph on course to graduate with a bachelors degree in Computer Science next December.<br>
-        Over the last few years I have spent many hours expanding on my knowledge and skills as a programmer which will be demonstrated down in the Projects section. <br>
-        When I'm not taking on new programming projects with my friends and roommates, I enjoy playing many brain testing video games, watching Netflix and hanging out with friends and family.
-      </p>
-      <h4 class="font-weight-bold" id="age" style="font-family: Katibeh; font-size: 2rem;">Liam Andrew Jones,</h4>
-      <h5 class="font-weight-bold my-3" style="font-family: Katibeh; font-family:2rem;">Guelph, On. - Calgary Ab.</h5>
+
+    <!-- <div class="testimonial wow fadeInUp" data-wow-delay="0.3s"> -->
+    <!--Avatar-->
+    <div class="avatar">
+      <img src="img//backgrounds//avatar-Liam.jpeg" class="rounded-circle img-fluid" alt="My Avatar">
     </div>
+
+    <!--Content-->
+    <p>
+      Hi! I'm a fourth year student at the Univeristy of Guelph on course to graduate with a bachelors degree in Computer Science next December.<br>
+      Over the last few years I have spent many hours expanding on my knowledge and skills as a programmer which will be demonstrated down in the Projects section. <br>
+      When I'm not taking on new programming projects with my friends and roommates, I enjoy playing many brain testing video games, watching Netflix, hitting the gym, and hanging out with friends and family.
+    </p>
+    <h5 id="age" style="font-size: 2rem;">Liam Andrew Jones,</h5>
+    <h5>Guelph, On. - Calgary Ab.</h5>
   </section>
 
   <!-- Education Section -->
-  <section class="row justify-content-center wow fadeInUp" data-wow-delay="0.6s" id="education">
-    <div class="col-sm-12 sectionTitle">
+  <section class="row justify-content-center wow fadeInUp" data-wow-delay="0.3s" id="education">
+    <!-- Education Title -->
+    <div class="col-sm-12">
       <h2>Education</h2>
     </div>
 
-    <div class="div wow fadeInUp" data-wow-delay="0.3s">
+    <p id="bodySubTitle">
+      All about my education on my way to becoming an experienced programmer.
+    </p>
 
-      <div class="row justify-content-center" style="padding-top: 5rem;">
+    <!-- Education Body -->
+    <!-- School Cards -->
+    <div class="row justify-content-around">
+      <!-- Guelph Card -->
+      <div class="col-sm-5 card blue lighten-2 text-white text-center p-3 mt-2 mb-3" style="max-width: 700px;">
+        <blockquote class="blockquote">
+          <h3>Univeristy of Guelph</h3>
+          <h6>Bachelor of Computing, Honours Computer Science</h6>
+          <h6>Guelph, Ontario</h6>
+          <p style="color: white;">
+            Currently on track to complete a bachelors degree at the university level in computer science in December 2019.
+            So far in my education, I have completed a wide variety of classes making me a very adaptable programmer.<br>
+            Current year of enrollment: Fourth.
+          </p>
+          <br>
+          <br>
+
+          <p id="quote">
+            "You are always a student, never a master. You have to keep moving forward."
+          </p>
+          <footer class="blockquote-footer">
+            <small>
+              <cite title="Source Title">Conrad Hall</cite>
+            </small>
+          </footer>
+        </blockquote>
+      </div>
+
+      <!-- Nelson Card -->
+      <div class="col-sm-5 card blue lighten-2 text-white text-center p-3 mt-2 mb-3" style="max-width: 700px;">
+        <blockquote class="blockquote mb-0">
+          <h3>Nelson High School</h3>
+          <h6>Academic Course Stream</h6>
+          <h6>Burlington, Ontario</h6>
+          <p style="color: white;">
+            Obtained my High School diploma in 2015 at Nelson High School in Burlington, Ontario.
+            Completed all courses at the Academic level, with an 80% average.
+            This is where I began my programming journey, taking 3 years of CS focusing on Java.
+          </p>
+          <br>
+          <br>
+
+
+          <p id="quote">
+            "The roots of education are bitter, but the fruit is sweet."
+          </p>
+          <footer class="blockquote-footer">
+            <small>
+              <cite title="Source Title">Aristotle</cite>
+            </small>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Notable Courses Row -->
+    <div>
+      <div class="row" style="padding-top: 5rem;">
         <div class="col-sm">
-          <div class="card blue lighten-2 text-white text-center p-3 mt-2 mb-3" style="max-width: 700px;">
-            <blockquote class="blockquote mb-0">
-              <h2>Univeristy of Guelph</h2>
-              <h6>Bachelor of Computing, Computer Science</h6>
-              <h6>Guelph, Ontario</h6>
-              <p>
-                Currently on track to complete a bachelors degree at the university level in computer science in December 2019. <br>
-                Current year of enrollment: Fourth.
-              </p>
-              <br>
-              <br>
-
-              <p style="padding-bottom: 0; font-size: 0.8rem;">
-                "You are always a student, never a master. You have to keep moving forward."
-              </p>
-              <footer class="blockquote-footer" style="padding-top: 0;">
-                <small>
-                  <cite title="Source Title">Conrad Hall</cite>
-                </small>
-              </footer>
-            </blockquote>
-          </div>
-        </div>
-
-        <div class="col-sm">
-          <div class="card blue lighten-2 text-white text-center p-3 mt-2 mb-3" style="max-width: 700px;">
-            <blockquote class="blockquote mb-0">
-              <h2>Nelson High School</h2>
-              <h6>Academic Course Stream</h6>
-              <h6>Burlington, Ontario</h6>
-              <p>
-                Obtained my High School diploma in 2015 at Nelson High School in Burlington, Ontario.
-                Completed all courses at the Academic level, with an 80% average.
-                This is where I began my programming journey, taking 3 years of CS focusing on Java.
-              </p>
-              <br>
-              <br>
-
-
-              <p style="padding-bottom: 0; font-size: 0.8rem;">
-                "The roots of education are bitter, but the fruit is sweet."
-              </p>
-              <footer class="blockquote-footer">
-                <small>
-                  <cite title="Source Title">Aristotle</cite>
-                </small>
-              </footer>
-            </blockquote>
-          </div>
+          <h3>Notable Courses at the Univeristy of Guelph.</h3>
         </div>
       </div>
 
-      <div style="padding-top: 5rem;">
-        <div class="row">
-          <div class="col-sm">
-            <h2>Notable Courses at the Univeristy of Guelph.</h2>
+      <div class="row">
+        <div class="accordion col-sm-6" id="accordionExample2">
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingOne2">
+              <h4 class="mb-0 accordionStyle">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne2A"
+                aria-expanded="true" aria-controls="collapseOne2A">
+                    CIS 3750 System Analysis and Design in Applications
+                </button>
+              </h4>
+            </div>
+            <div id="collapseOne2A" class="collapse" aria-labelledby="headingOne2" data-parent="#accordionExample2">
+              <div class="card-body">
+                An introduction to the issues and techniques encountered in the design and construction of software systems. The theory and
+                models of software evolution. Topics include requirements and specifications, prototyping, design principles, object-oriented
+                analysis and design, standards, integration, risk analysis, testing and debugging.
+              </div>
+            </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingTwo2">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2A"
+                  aria-expanded="false" aria-controls="collapseTwo2A">
+                    CIS 3760 Software Engineering
+                </button>
+              </h4>
+            </div>
+            <div id="collapseTwo2A" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample2">
+              <div class="card-body">
+                This course is an examination of the software engineering process, the production of reliable systems and techniques for the
+                design and development of complex software. Topics include object-oriented analysis, design and modeling, software architectures,
+                 software reviews, software quality, software engineering, ethics, maintenance and formal specifications.
+              </div>
+            </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingThree2">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2A"
+                  aria-expanded="false" aria-controls="collapseThree2A">
+                  CIS 3120 Digital Systems I
+                </button>
+              </h4>
+            </div>
+            <div id="collapseThree2A" class="collapse" aria-labelledby="headingThree2" data-parent="#accordionExample2">
+              <div class="card-body">
+                This course examines Boolean algebra, minimization of Boolean expressions, design of combinational and sequential logic circuits,
+                memory design, control, ALU, bus design, microprogramming and CPU design.
+              </div>
+            </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingFour2">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour2A"
+                  aria-expanded="false" aria-controls="collapseFour2A">
+                  CIS 2030 Structure & Application of Microcomputers
+                </button>
+              </h4>
+            </div>
+            <div id="collapseFour2A" class="collapse" aria-labelledby="headingFour2" data-parent="#accordionExample2">
+              <div class="card-body">
+                This course examines the components of a computer system, including memories, CPU, buses, and input/output subsystems and interface hardware.
+                Programming of these systems is studied, including instruction sets, addressing modes, assembly/machine language programming, development of
+                algorithms for data acquisition, display, and process control.
+              </div>
+            </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingFive2">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive2A"
+                  aria-expanded="false" aria-controls="collapseFive2A">
+                  CIS 3150 Theory of Computation
+                </button>
+              </h4>
+            </div>
+            <div id="collapseFive2A" class="collapse" aria-labelledby="headingFive2" data-parent="#accordionExample2">
+              <div class="card-body">
+                This course explores the theory of computation including automata theory, Turing machines and their variants,
+                formal languages, parsing, the Halting problem, undecidability, and NP-completeness.
+              </div>
+            </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingSix2">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix2A"
+                  aria-expanded="false" aria-controls="collapseSix2A">
+                  CIS 2460 Modelling of Computer Systems
+                </button>
+              </h4>
+            </div>
+            <div id="collapseSix2A" class="collapse" aria-labelledby="headingSix2" data-parent="#accordionExample2">
+              <div class="card-body">
+                This course examines discrete simulation based on event queues and random number generation. Methods for generating input data,
+                measuring and evaluating results using standard statistical tests are studied. Topics covered will include model calibration and
+                validation, and algebraic, probabilistic and simple queuing models of software and hardware operation.
+              </div>
+            </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingSeven2">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven2A"
+                  aria-expanded="false" aria-controls="collapseSeven2A">
+                  CIS 2750 Software System Development & Integration
+                </button>
+              </h4>
+            </div>
+            <div id="collapseSeven2A" class="collapse" aria-labelledby="headingSeven2" data-parent="#accordionExample2">
+              <div class="card-body">
+                Techniques and tools used in the development of large software systems. Methods for organizing and constructing modular systems,
+                manipulating files, an introduction to interface design, and use of databases. Software tools for managing projects,
+                database connectivity, configuration management, and system application programmer interfaces.
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="accordion col-sm-6" id="accordionExample2">
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingOne2">
-                <h5 class="mb-0 accordionStyle">
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne2A"
-                    aria-expanded="true" aria-controls="collapseOne2A">
-                      CIS 3750 System Analysis and Design in Applications
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseOne2A" class="collapse collapseStyle" aria-labelledby="headingOne2" data-parent="#accordionExample2">
-                <div class="card-body">
-                  An introduction to the issues and techniques encountered in the design and construction of software systems. The theory and
-                  models of software evolution. Topics include requirements and specifications, prototyping, design principles, object-oriented
-                  analysis and design, standards, integration, risk analysis, testing and debugging.
-                </div>
-              </div>
+        <div class="accordion col-sm-6" id="accordionExample2B">
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingOne2B">
+              <h4 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne2B"
+                  aria-expanded="true" aria-controls="collapseOne2B">
+                    CIS 3490 Analysis & Design of Computer Algorithms
+                </button>
+              </h4>
             </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingTwo2">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2A"
-                    aria-expanded="false" aria-controls="collapseTwo2A">
-                      CIS 3760 Software Engineering
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseTwo2A" class="collapse collapseStyle" aria-labelledby="headingTwo2" data-parent="#accordionExample2">
-                <div class="card-body">
-                  This course is an examination of the software engineering process, the production of reliable systems and techniques for the
-                  design and development of complex software. Topics include object-oriented analysis, design and modeling, software architectures,
-                   software reviews, software quality, software engineering, ethics, maintenance and formal specifications.
-                </div>
-              </div>
-            </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingThree2">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2A"
-                    aria-expanded="false" aria-controls="collapseThree2A">
-                    CIS 3120 Digital Systems I
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseThree2A" class="collapse collapseStyle" aria-labelledby="headingThree2" data-parent="#accordionExample2">
-                <div class="card-body">
-                  This course examines Boolean algebra, minimization of Boolean expressions, design of combinational and sequential logic circuits,
-                  memory design, control, ALU, bus design, microprogramming and CPU design.
-                </div>
-              </div>
-            </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingFour2">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour2A"
-                    aria-expanded="false" aria-controls="collapseFour2A">
-                    CIS 2030 Structure & Application of Microcomputers
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseFour2A" class="collapse collapseStyle" aria-labelledby="headingFour2" data-parent="#accordionExample2">
-                <div class="card-body">
-                  This course examines the components of a computer system, including memories, CPU, buses, and input/output subsystems and interface hardware.
-                  Programming of these systems is studied, including instruction sets, addressing modes, assembly/machine language programming, development of
-                  algorithms for data acquisition, display, and process control.
-                </div>
-              </div>
-            </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingFive2">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive2A"
-                    aria-expanded="false" aria-controls="collapseFive2A">
-                    CIS 3150 Theory of Computation
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseFive2A" class="collapse collapseStyle" aria-labelledby="headingFive2" data-parent="#accordionExample2">
-                <div class="card-body">
-                  This course explores the theory of computation including automata theory, Turing machines and their variants,
-                  formal languages, parsing, the Halting problem, undecidability, and NP-completeness.
-                </div>
-              </div>
-            </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingSix2">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix2A"
-                    aria-expanded="false" aria-controls="collapseSix2A">
-                    CIS 2460 Modelling of Computer Systems
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseSix2A" class="collapse collapseStyle" aria-labelledby="headingSix2" data-parent="#accordionExample2">
-                <div class="card-body">
-                  This course examines discrete simulation based on event queues and random number generation. Methods for generating input data,
-                  measuring and evaluating results using standard statistical tests are studied. Topics covered will include model calibration and
-                  validation, and algebraic, probabilistic and simple queuing models of software and hardware operation.
-                </div>
-              </div>
-            </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingSeven2">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven2A"
-                    aria-expanded="false" aria-controls="collapseSeven2A">
-                    CIS 2750 Software System Development & Integration
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseSeven2A" class="collapse collapseStyle" aria-labelledby="headingSeven2" data-parent="#accordionExample2">
-                <div class="card-body">
-                  Techniques and tools used in the development of large software systems. Methods for organizing and constructing modular systems,
-                  manipulating files, an introduction to interface design, and use of databases. Software tools for managing projects,
-                  database connectivity, configuration management, and system application programmer interfaces.
-                </div>
+            <div id="collapseOne2B" class="collapse" aria-labelledby="headingOne2B" data-parent="#accordionExample2B">
+              <div class="card-body">
+                The design and analysis of efficient computer algorithms are studied. Topics which will be studied include: standard methodologies,
+                asymptotic behaviour, optimality, lower bounds, implementation considerations, graph algorithms, matrix computations (e.g. Strassen's method), NP-completeness.
               </div>
             </div>
           </div>
-
-          <div class="accordion col-sm-6" id="accordionExample2B">
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingOne2B">
-                <h5 class="mb-0">
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne2B"
-                    aria-expanded="true" aria-controls="collapseOne2B">
-                      CIS 3490 Analysis & Design of Computer Algorithms
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseOne2B" class="collapse collapseStyle" aria-labelledby="headingOne2B" data-parent="#accordionExample2B">
-                <div class="card-body">
-                  The design and analysis of efficient computer algorithms are studied. Topics which will be studied include: standard methodologies,
-                  asymptotic behaviour, optimality, lower bounds, implementation considerations, graph algorithms, matrix computations (e.g. Strassen's method), NP-completeness.
-                </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingTwo2B">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2B"
+                  aria-expanded="false" aria-controls="collapseTwo2B">
+                    CIS 2430 Object Oriented Programming
+                </button>
+              </h4>
+            </div>
+            <div id="collapseTwo2B" class="collapse" aria-labelledby="headingTwo2B" data-parent="#accordionExample2B">
+              <div class="card-body">
+                This course introduces the Object Oriented (OO) approach to programming and algorithm design. Topics will include the creation and use of objects from class libraries,
+                user defined objects, inheritance, modularity, generic code, components, collections and containers, and an introduction to OO design methodologies.
               </div>
             </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingTwo2B">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2B"
-                    aria-expanded="false" aria-controls="collapseTwo2B">
-                      CIS 2430 Object Oriented Programming
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseTwo2B" class="collapse collapseStyle" aria-labelledby="headingTwo2B" data-parent="#accordionExample2B">
-                <div class="card-body">
-                  This course introduces the Object Oriented (OO) approach to programming and algorithm design. Topics will include the creation and use of objects from class libraries,
-                  user defined objects, inheritance, modularity, generic code, components, collections and containers, and an introduction to OO design methodologies.
-                </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingThree2B">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2B"
+                  aria-expanded="false" aria-controls="collapseThree2B">
+                  CIS 2910 Discrete Structures in Computer II
+                </button>
+              </h4>
+            </div>
+            <div id="collapseThree2B" class="collapse" aria-labelledby="headingThree2B" data-parent="#accordionExample2B">
+              <div class="card-body">
+                This course is a further introduction to discrete structures and formal methodologies used in computer science, including sequences,
+                summations, recursion, combinatorics, discrete probability, and graph theory.
               </div>
             </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingThree2B">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2B"
-                    aria-expanded="false" aria-controls="collapseThree2B">
-                    CIS 2910 Discrete Structures in Computer II
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseThree2B" class="collapse collapseStyle" aria-labelledby="headingThree2B" data-parent="#accordionExample2B">
-                <div class="card-body">
-                  This course is a further introduction to discrete structures and formal methodologies used in computer science, including sequences,
-                  summations, recursion, combinatorics, discrete probability, and graph theory.
-                </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingFourB2">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour2B"
+                  aria-expanded="false" aria-controls="collapseFour2B">
+                  CIS 2520 Data Structures
+                </button>
+              </h4>
+            </div>
+            <div id="collapseFour2B" class="collapse" aria-labelledby="headingFour2B" data-parent="#accordionExample2B">
+              <div class="card-body">
+                This course is a study of basic data structures, such as lists, stacks, queues, trees, and tables. Topics which will be examined include
+                abstract data types, sequential and linked representations, and an introduction to algorithm analysis; various traversal, search, insertion,
+                removal, and sorting algorithms.
               </div>
             </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingFourB2">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour2B"
-                    aria-expanded="false" aria-controls="collapseFour2B">
-                    CIS 2520 Data Structures
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseFour2B" class="collapse collapseStyle" aria-labelledby="headingFour2B" data-parent="#accordionExample2B">
-                <div class="card-body">
-                  This course is a study of basic data structures, such as lists, stacks, queues, trees, and tables. Topics which will be examined include
-                  abstract data types, sequential and linked representations, and an introduction to algorithm analysis; various traversal, search, insertion,
-                  removal, and sorting algorithms.
-                </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingFive2B">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive2B"
+                  aria-expanded="false" aria-controls="collapseFive2B">
+                  CIS 2170 User Interface Design
+                </button>
+              </h4>
+            </div>
+            <div id="collapseFive2B" class="collapse" aria-labelledby="headingFive2B" data-parent="#accordionExample2B">
+              <div class="card-body">
+                This course is a practical introduction to the area of user interface construction. Topics include user interface components and their application,
+                best practices for user interface design, approaches to prototyping, and techniques for assessing interface suitability.
               </div>
             </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingFive2B">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive2B"
-                    aria-expanded="false" aria-controls="collapseFive2B">
-                    CIS 2170 User Interface Design
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseFive2B" class="collapse collapseStyle" aria-labelledby="headingFive2B" data-parent="#accordionExample2B">
-                <div class="card-body">
-                  This course is a practical introduction to the area of user interface construction. Topics include user interface components and their application,
-                  best practices for user interface design, approaches to prototyping, and techniques for assessing interface suitability.
-                </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingSix2B">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix2B"
+                  aria-expanded="false" aria-controls="collapseSix2B">
+                  MATH 1200 Calculus II
+                </button>
+              </h4>
+            </div>
+            <div id="collapseSix2B" class="collapse" aria-labelledby="headingSix2B" data-parent="#accordionExample2B">
+              <div class="card-body">
+                This course is a continuation of MATH*1200. It is a theoretical course intended primarily for students who need or expect
+                to pursue further studies in mathematics, physics, chemistry, engineering and computer science. Topics include inverse functions,
+                inverse trigonometric functions, hyperbolic functions, indeterminate forms and l'Hopital's rule, techniques of integration, parametric
+                equations, polar coordinates, Taylor and Maclaurin series; functions of two or more variables, partial derivatives, and if time permits,
+                an introduction to multiple integration.
               </div>
             </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingSix2B">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix2B"
-                    aria-expanded="false" aria-controls="collapseSix2B">
-                    MATH 1200 Calculus II
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseSix2B" class="collapse collapseStyle" aria-labelledby="headingSix2B" data-parent="#accordionExample2B">
-                <div class="card-body">
-                  This course is a continuation of MATH*1200. It is a theoretical course intended primarily for students who need or expect
-                  to pursue further studies in mathematics, physics, chemistry, engineering and computer science. Topics include inverse functions,
-                  inverse trigonometric functions, hyperbolic functions, indeterminate forms and l'Hopital's rule, techniques of integration, parametric
-                  equations, polar coordinates, Taylor and Maclaurin series; functions of two or more variables, partial derivatives, and if time permits,
-                  an introduction to multiple integration.
-                </div>
-              </div>
+          </div>
+          <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingSeven2B">
+              <h4 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven2B"
+                  aria-expanded="false" aria-controls="collapseSeven2B">
+                  MATH 1200 Calculus I
+                </button>
+              </h4>
             </div>
-            <div class="card z-depth-0 bordered">
-              <div class="card-header" id="headingSeven2B">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven2B"
-                    aria-expanded="false" aria-controls="collapseSeven2B">
-                    MATH 1200 Calculus I
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseSeven2B" class="collapse collapseStyle" aria-labelledby="headingSeven2B" data-parent="#accordionExample2B">
-                <div class="card-body">
-                  This is a theoretical course intended primarily for students who expect to pursue further studies in mathematics
-                  and its applications. Topics include inequalities and absolute value; compound angle formulas for trigonometric
-                  functions; limits and continuity using rigorous definitions; the derivative and derivative formulas (including
-                  derivatives of trigonometric, exponential and logarithmic functions); Fermat's theorem; Rolle's theorem; the
-                  mean-value theorem; applications of the derivative; Riemann sums; the definite integral; the fundamental theorem
-                  of calculus; applications of the definite integral; the mean value theorem for integrals.
-                </div>
+            <div id="collapseSeven2B" class="collapse" aria-labelledby="headingSeven2B" data-parent="#accordionExample2B">
+              <div class="card-body">
+                This is a theoretical course intended primarily for students who expect to pursue further studies in mathematics
+                and its applications. Topics include inequalities and absolute value; compound angle formulas for trigonometric
+                functions; limits and continuity using rigorous definitions; the derivative and derivative formulas (including
+                derivatives of trigonometric, exponential and logarithmic functions); Fermat's theorem; Rolle's theorem; the
+                mean-value theorem; applications of the derivative; Riemann sums; the definite integral; the fundamental theorem
+                of calculus; applications of the definite integral; the mean value theorem for integrals.
               </div>
             </div>
           </div>
@@ -481,89 +523,88 @@
     </div>
   </section>
 
-  <!-- Resume Section -->
-  <!-- <section class="row wow fadeInUp" data-wow-delay="0.6s" id="resume">
-    <div class="col-sm sectionTitle" style="padding-bottom: 5rem;">
-      <h2>Resume</h2>
-    </div>
-
-    <div class="embed-responsive embed-responsive-16by9 wow fadeInUp"> data-wow-delay="0.3s"
-      <iframe class="embed-responsive-item" src="resumes//Liam Jones - CS - Resume - 2019.pdf" allowfullscreen></iframe>
-    </div>
-
-  </section> -->
-
   <!-- Skills Section -->
-  <section class="text-center my-5 wow fadeInUp" data-wow-delay="0.6s" id="skills">
-    <!-- Section heading -->
-    <h2 class="h1-responsive font-weight-bold my-5 sectionTitle">Skills</h2>
-    <div class="wow fadeInUp" data-wow-delay="0.3s">
-      <!-- Section description -->
-      <p class="lead grey-text w-responsive mx-auto mb-5">
-        Several of the skills I have acquired over my many years of programming.
-      </p>
+  <section class="text-center wow fadeInUp" data-wow-delay="0.3s" id="skills">
+    <!-- Skills Title -->
+    <h2>Skills</h2>
 
-      <div class="row" style="padding-top:3rem;">
-        <div class="col-md-4">
+    <!-- Section Body -->
+    <p id="bodySubTitle">
+      Several of the skills I have acquired over my many years of programming.
+    </p>
 
-          <i class="fas fa-american-sign-language-interpreting fa-3x red-text"></i>
-          <h5 class="font-weight-bold my-4">Languages</h5>
-          <p class="grey-text mb-md-0 mb-5">
-            C, Java, Python, HTML, PHP, <br>
-            CSS, JavaScript, X68 Assembly.
-          </p>
+    <div class="row" id="skillsBody">
+      <!-- Languages Col -->
+      <div class="col-md-3">
+        <i class="fas fa-american-sign-language-interpreting fa-3x red-text"></i>
+        <h3>Languages</h3>
+        <p>
+          C, Java, Python, X68 Assembly,<br>
+          HTML, PHP, CSS, JavaScript.
+        </p>
+      </div>
 
+      <!-- Areas of Focus Col -->
+      <div class="col-md-6">
+        <i class="fas fa-book fa-3x cyan-text"></i>
+        <h3>Areas of Focus</h3>
+
+        <!-- Areas of focus list -->
+        <div class="row AofFList">
+          <!-- Left side of list -->
+          <div class="col-sm-6">
+            <ul class="AofFLeft">
+              <li>UI/UX Design</li>
+              <li>Web Scraping</li>
+              <li>O-O Programming</li>
+              <li>Low-Level Engineering</li>
+              <li>Complex Algorithms</li>
+              <li>Regular expressions</li>
+            </ul>
+          </div>
+
+          <!-- Right side of List -->
+          <div class="col-sm-6">
+            <ul class="AofFRight">
+              <li>SE Practices</li>
+              <li>Web Development</li>
+              <li>Database Management</li>
+              <li>Android App Development</li>
+              <li>Complex Data Structures</li>
+              <li>Linux and Windows</li>
+              <!-- <li>Complex Logic Comprehension</li> -->
+            </ul>
+          </div>
         </div>
+      </div>
 
-        <div class="col-md-4">
-          <i class="fas fa-book fa-3x cyan-text"></i>
-          <h5 class="font-weight-bold my-4">Areas of Focus</h5>
-          <p class="grey-text mb-md-0 mb-5">
-            Object-Oriented Programming, UI/UX Design, Web Development, Web scraping, Database Management, Regular expressions, Complex Logic Understanding/Compression,
-            Low-Level Engineering, Android App Development, Complex Algorithms and Data Structures, Linux/Windows Development, Software Engineering Practices.
-          </p>
-
-        </div>
-
-        <div class="col-md-4">
-          <i class="fas fa-code fa-3x orange-text"></i>
-          <h5 class="font-weight-bold my-4">Open Source Libraries and Frameworks</h5>
-          <p class="grey-text mb-0">
-            MDB, Bootstrap 3, Materialize, <br>
-            JQuery, Ajax, and Requests.
-          </p>
-
-        </div>
+      <!-- Libraries and Frameworks Col -->
+      <div class="col-md-3">
+        <i class="fas fa-code fa-3x orange-text"></i>
+        <h3>Open Source Libraries and Frameworks</h3>
+        <p>
+          MDB, Bootstrap 3/5, Materialize, <br>
+          JQuery, Ajax, and Requests.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="row justify-content-center wow fadeInUp" data-wow-delay="0.6s" id="projects">
-    <!-- <div class="row justify-content-center"> -->
-      <!-- <div class="col-sm-12 text-center">
-        <p style=" font-size: 3rem; text-algin: center;">
-          "Project details coming soon!"
-        </p>
-        <footer class="blockquote-footer" style="padding-top: 0; font-size: 2.5rem;">
-          <small>
-            <cite title="Source Title">Mark Sansome</cite>
-          </small>
-        </footer>
-      </div> -->
-      <section class="my-5" style="padding: 0.25rem 1rem 0.25rem;">
-        <h2 class="h1-responsive font-weight-bold text-center my-5 sectionTitle">Projects</h2>
-        <div class="wow fadeInUp" data-wow-delay="0.3s" id="projectList">
-          <p class="text-center w-responsive mx-auto mb-5">
-            Here's all of my notable projects pulled dynamically from the Github API!
-          </p>
-        </div>
-      </section>
-    <!-- </div> -->
+  <section class="row wow fadeInUp" data-wow-delay="0.3s" id="projects">
+    <!-- Projects title -->
+    <h2 class="col-sm-12">Projects</h2>
+
+    <!-- Projects Body -->
+    <div id="projectsBody">
+      <p id="bodySubTitle">
+        Here's all of my notable projects pulled dynamically from the Github API!
+      </p>
+    </div>
   </section>
 
   <!-- Contact Information/Footer -->
-  <footer class="page-footer font-small mdb-color wow fadeInUp"  data-wow-delay="0.6s">
+  <footer class="page-footer font-small mdb-color">
     <!-- Footer Elements -->
     <div class="container">
       <!-- Grid row-->
@@ -586,8 +627,8 @@
             <a href="https://www.instagram.com/liamjones1134/" target="_blank">
               <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" data-toggle="tooltip" data-placement="bottom" title="Instagram"> </i>
             </a>
-            <a href="" target="_blank">
-              <i class="fab fa-dribbble fa-lg white-text fa-2x" data-toggle="tooltip" data-placement="bottom" title="Dribble"> </i>
+            <a href="https://dribbble.com/Neptuniam/buckets" target="_blank">
+              <i class="fab fa-dribbble fa-lg white-text fa-2x" data-toggle="tooltip" data-placement="bottom" title="Dribbble"> </i>
             </a>
           </div>
         </div>
@@ -595,7 +636,7 @@
     </div>
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3" style="font-family: Patua One; font-size: 1.05rem;" id="footerCP"></div>
+    <div class="footer-copyright text-center py-3" style="font-family: Patua One; font-size: 1.05rem;" id="footerCP">Insert CP Here</div>
   </footer>
 
 
@@ -611,10 +652,14 @@
 
   <script>
     new WOW().init();
-
-    $('body').scrollspy( {target: '.dotted-scrollspy'} );
+    $('#about').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', addBody('aboutBody'));
+    // $('body').scrollspy( {target: '.dotted-scrollspy'} );
 
     $(function () { $('[data-toggle="tooltip"]').tooltip() })
+
+    function addBody(id) {
+      $('#aboutBody').addClass('animated fadeInUp slower');
+    }
 
     function setQuality() {
       var qualities = ['Funny', 'Educated', 'Motivated', 'Adaptable', 'Ambitious', 'Considerate', 'Patient', 'Creative', 'Dedicated', 'Loyal  ']
@@ -647,7 +692,7 @@
     }
 
     function buildImageDiv(icon, projectName) {
-      var newProject = "<div class=\"col-lg-5\"><div class=\"view overlay rounded z-depth-2 mb-lg-0 mb-4\"><img class=\"img-fluid\" style=\"min-height: 300px;\" src=\"";
+      var newProject = "<div class=\"col-lg-5\"><div class=\"view overlay rounded z-depth-2 mb-lg-0 mb-4\"><img class=\"img-fluid\" style=\"min-height: 300px; margin: auto;\" src=\"";
 
       // TODO: FIX ME DEAR GOD.
       if (projectName == 'Personal-Homepage' || projectName == 'Online-Resume' || projectName == 'Flight-Checker' || projectName == 'Remindly-V2.0' || projectName == 'Generic-Linked-List')
@@ -660,9 +705,13 @@
       return (newProject);
     }
 
+    function reformatDate(dateCreated) {
+      return (new Date(dateCreated).toDateString());
+    }
+
     updateAge();
-    setQuality();
     updateCopyright();
+    setQuality();
     setInterval(function() { setQuality(); }, 5000);
 
     $(document).ready(function() {
@@ -708,7 +757,7 @@
 
             newProject += "<p>Primary Language: " + response[projectIndex].language + "</p>";
 
-            newProject += "<p style=\"font-size: 0.85rem; position: absolute; bottom: 35px;\">Started on: <a>" + response[projectIndex].created_at + "</a></p>";
+            newProject += "<p style=\"font-size: 0.85rem; position: absolute; bottom: 35px;\">Started on: <a>" + reformatDate(response[projectIndex].created_at) + "</a></p>";
 
             newProject += "<a class=\"btn btn-md\" style=\"position: absolute; bottom: 0; background-color: " + colours[projectIndex] + "\" href=\"" + response[projectIndex].html_url + "\" target=\"_blank\"\>Check out on Github!</a></div>";
 
@@ -718,11 +767,11 @@
 
             newProject += "</div></div></div><hr class=\"my-5\">";
 
-            $("#projectList").append(newProject);
+            $("#projectsBody").append(newProject);
           }
         },
         error: function(response) {
-          console.log("Failure!");
+          console.log("Github Response Failure!");
           console.log(response);
         }
       });
