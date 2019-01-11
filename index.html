@@ -57,7 +57,12 @@
 
     section {
       padding: 6em 2em;
-      v-index: 1000;
+      /* v-index: 1000; */
+      /* max-width: 100% */
+    }
+
+    .row {
+            margin: 0;
     }
 
     section:nth-of-type(2n) {
@@ -126,19 +131,44 @@
        text-align: center;
      }
 
-    .accordion {
-      /* max-width: 700px; */
-      width: 700px;
-    }
+     .card-header {
+       /* background-color: blue; */
+     }
 
-    .card-header h4 {
-      font-family: "Roboto Condensed";
-      /* font-size: 2rem; */
-      /* padding: 1em 0 1em; */
-      /* position: relative; */
-      /* height: 5vh; */
-      /* bottom: 15px; */
-      /* background-color: black; */
+     .card h4 {
+       font-family: "Roboto Condensed";
+       font-size: 1.2rem;
+       color: white;
+     }
+
+     .card .card-body {
+       font-family: "Roboto Condensed";
+       font-size: 1.2rem;
+       color: gray;
+       background-color: white;
+     }
+
+      #accordionEx1 h4 {
+        text-align: right;
+      }
+
+      #accordionEx1 i {
+       position: absolute;
+       left: 1em;
+     }
+
+     #accordionEx1B h4 {
+       text-align: left;
+     }
+
+     #accordionEx1B i {
+       position: absolute;
+       right: 1em;
+     }
+
+     /* Mobile specific classes */
+     @media screen and (max-width: 480px) {
+      .AofFLeft, .AofFRight { text-align: center; }
     }
 
     .noselect {
@@ -151,7 +181,6 @@
                                       supported by Chrome and Opera */
     }
   </style>
-
 </head>
 
 <body style="position: relative;" data-spy="scroll" data-target=".navbar-nav">
@@ -224,8 +253,7 @@
           <h6>Guelph, Ontario</h6>
           <p style="color: white;">
             Currently on track to complete a bachelors degree at the university level in computer science in December 2019.
-            So far in my education, I have completed a wide variety of classes making me a very adaptable programmer.<br>
-            Current year of enrollment: Fourth.
+            So far in my education, I have completed a wide variety of classes making me a very adaptable programmer. Current year of enrollment: Fourth.
           </p>
           <br>
           <br>
@@ -269,75 +297,32 @@
     </div>
 
     <!-- Notable Courses Row -->
-    <div>
+    <div class="container-fluid">
       <div class="row" style="padding-top: 5rem;">
-        <div class="col-sm">
+        <div class="col-sm text-center">
           <h3>Notable Courses at the Univeristy of Guelph.</h3>
         </div>
       </div>
 
-      <div class="row">
-        <div class="accordion col-sm-6" id="accordionExample2">
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingOne2">
-              <h4 class="mb-0 accordionStyle">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne2A"
-                aria-expanded="true" aria-controls="collapseOne2A">
-                    CIS 3750 System Analysis and Design in Applications
-                </button>
-              </h4>
+      <div class="row container-fluid">
+
+        <div class="col-sm-1"></div>
+
+        <!--Accordion wrapper-->
+        <div class="col-sm-5 accordion md-accordion" id="accordionEx1" role="tablist" aria-multiselectable="true">
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingFive5A">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseFive51A"
+                aria-expanded="false" aria-controls="collapseFive51A">
+                <h4 class="mb-0">
+                  CIS 2030 Structure and Application of Microcomputers <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseOne2A" class="collapse" aria-labelledby="headingOne2" data-parent="#accordionExample2">
-              <div class="card-body">
-                An introduction to the issues and techniques encountered in the design and construction of software systems. The theory and
-                models of software evolution. Topics include requirements and specifications, prototyping, design principles, object-oriented
-                analysis and design, standards, integration, risk analysis, testing and debugging.
-              </div>
-            </div>
-          </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingTwo2">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2A"
-                  aria-expanded="false" aria-controls="collapseTwo2A">
-                    CIS 3760 Software Engineering
-                </button>
-              </h4>
-            </div>
-            <div id="collapseTwo2A" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample2">
-              <div class="card-body">
-                This course is an examination of the software engineering process, the production of reliable systems and techniques for the
-                design and development of complex software. Topics include object-oriented analysis, design and modeling, software architectures,
-                 software reviews, software quality, software engineering, ethics, maintenance and formal specifications.
-              </div>
-            </div>
-          </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingThree2">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2A"
-                  aria-expanded="false" aria-controls="collapseThree2A">
-                  CIS 3120 Digital Systems I
-                </button>
-              </h4>
-            </div>
-            <div id="collapseThree2A" class="collapse" aria-labelledby="headingThree2" data-parent="#accordionExample2">
-              <div class="card-body">
-                This course examines Boolean algebra, minimization of Boolean expressions, design of combinational and sequential logic circuits,
-                memory design, control, ALU, bus design, microprogramming and CPU design.
-              </div>
-            </div>
-          </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingFour2">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour2A"
-                  aria-expanded="false" aria-controls="collapseFour2A">
-                  CIS 2030 Structure & Application of Microcomputers
-                </button>
-              </h4>
-            </div>
-            <div id="collapseFour2A" class="collapse" aria-labelledby="headingFour2" data-parent="#accordionExample2">
+            <!-- Card body -->
+            <div id="collapseFive51A" class="collapse" role="tabpanel" aria-labelledby="headingFive51A" data-parent="#accordionEx1">
               <div class="card-body">
                 This course examines the components of a computer system, including memories, CPU, buses, and input/output subsystems and interface hardware.
                 Programming of these systems is studied, including instruction sets, addressing modes, assembly/machine language programming, development of
@@ -345,32 +330,102 @@
               </div>
             </div>
           </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingFive2">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive2A"
-                  aria-expanded="false" aria-controls="collapseFive2A">
-                  CIS 3150 Theory of Computation
-                </button>
-              </h4>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingTwo1A">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo1A"
+                aria-expanded="false" aria-controls="collapseTwo1A">
+                <h4 class="mb-0">
+                  CIS 3750 System Analysis and Design in Applications <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseFive2A" class="collapse" aria-labelledby="headingFive2" data-parent="#accordionExample2">
+            <!-- Card body -->
+            <div id="collapseTwo1A" class="collapse" role="tabpanel" aria-labelledby="headingTwo1A" data-parent="#accordionEx1">
+              <div class="card-body">
+                An introduction to the issues and techniques encountered in the design and construction of software systems. The theory and
+                models of software evolution. Topics include requirements and specifications, prototyping, design principles, object-oriented
+                analysis and design, standards, integration, risk analysis, testing and debugging.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingTwo2A">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo21A"
+                aria-expanded="false" aria-controls="collapseTwo21A">
+                <h4 class="mb-0">
+                  CIS 3760 Software Engineering <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
+            </div>
+            <!-- Card body -->
+            <div id="collapseTwo21A" class="collapse" role="tabpanel" aria-labelledby="headingTwo21A" data-parent="#accordionEx1">
+              <div class="card-body">
+                This course is an examination of the software engineering process, the production of reliable systems and techniques for the
+                design and development of complex software. Topics include object-oriented analysis, design and modeling, software architectures,
+                 software reviews, software quality, software engineering, ethics, maintenance and formal specifications.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingFour1A">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseFour1A"
+                aria-expanded="false" aria-controls="collapseFour1A">
+                <h4 class="mb-0">
+                  CIS 3120 Digital Systems I <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
+            </div>
+            <!-- Card body -->
+            <div id="collapseFour1A" class="collapse" role="tabpanel" aria-labelledby="headingFour1A" data-parent="#accordionEx1">
+              <div class="card-body">
+                This course examines Boolean algebra, minimization of Boolean expressions, design of combinational and sequential logic circuits,
+                memory design, control, ALU, bus design, microprogramming and CPU design.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingSix6A">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseSix61A"
+                aria-expanded="false" aria-controls="collapseSix61A">
+                <h4 class="mb-0">
+                  CIS 3150 Theory of Computation <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
+            </div>
+            <!-- Card body -->
+            <div id="collapseSix61A" class="collapse" role="tabpanel" aria-labelledby="headingSix61A" data-parent="#accordionEx1">
               <div class="card-body">
                 This course explores the theory of computation including automata theory, Turing machines and their variants,
                 formal languages, parsing, the Halting problem, undecidability, and NP-completeness.
               </div>
             </div>
           </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingSix2">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix2A"
-                  aria-expanded="false" aria-controls="collapseSix2A">
-                  CIS 2460 Modelling of Computer Systems
-                </button>
-              </h4>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingSevenA">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseSeven1A"
+                aria-expanded="false" aria-controls="collapseSeven1A">
+                <h4 class="mb-0">
+                  CIS 2460 Modelling of Computer Systems <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseSix2A" class="collapse" aria-labelledby="headingSix2" data-parent="#accordionExample2">
+            <!-- Card body -->
+            <div id="collapseSeven1A" class="collapse" role="tabpanel" aria-labelledby="headingSeven1A" data-parent="#accordionEx1">
               <div class="card-body">
                 This course examines discrete simulation based on event queues and random number generation. Methods for generating input data,
                 measuring and evaluating results using standard statistical tests are studied. Topics covered will include model calibration and
@@ -378,16 +433,20 @@
               </div>
             </div>
           </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingSeven2">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven2A"
-                  aria-expanded="false" aria-controls="collapseSeven2A">
-                  CIS 2750 Software System Development & Integration
-                </button>
-              </h4>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingEight1A">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseEight1A"
+                aria-expanded="false" aria-controls="collapseEight1A">
+                <h4 class="mb-0">
+                  CIS 2750 Software System Development & Integration <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseSeven2A" class="collapse" aria-labelledby="headingSeven2" data-parent="#accordionExample2">
+            <!-- Card body -->
+            <div id="collapseEight1A" class="collapse" role="tabpanel" aria-labelledby="headingEight1A" data-parent="#accordionEx1">
               <div class="card-body">
                 Techniques and tools used in the development of large software systems. Methods for organizing and constructing modular systems,
                 manipulating files, an introduction to interface design, and use of databases. Software tools for managing projects,
@@ -397,65 +456,81 @@
           </div>
         </div>
 
-        <div class="accordion col-sm-6" id="accordionExample2B">
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingOne2B">
-              <h4 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne2B"
-                  aria-expanded="true" aria-controls="collapseOne2B">
-                    CIS 3490 Analysis & Design of Computer Algorithms
-                </button>
-              </h4>
+        <!--Accordion wrapper-->
+        <div class="col-sm-5 accordion md-accordion" id="accordionEx1B" role="tablist" aria-multiselectable="true">
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingOneB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseOneB"
+                aria-expanded="false" aria-controls="collapseOneB">
+                <h4 class="mb-0">
+                  CIS 3490 Analysis & Design of Computer Algorithms <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseOne2B" class="collapse" aria-labelledby="headingOne2B" data-parent="#accordionExample2B">
+            <!-- Card body -->
+            <div id="collapseOneB" class="collapse" role="tabpanel" aria-labelledby="headingOneB" data-parent="#accordionEx1B">
               <div class="card-body">
                 The design and analysis of efficient computer algorithms are studied. Topics which will be studied include: standard methodologies,
                 asymptotic behaviour, optimality, lower bounds, implementation considerations, graph algorithms, matrix computations (e.g. Strassen's method), NP-completeness.
               </div>
             </div>
           </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingTwo2B">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2B"
-                  aria-expanded="false" aria-controls="collapseTwo2B">
-                    CIS 2430 Object Oriented Programming
-                </button>
-              </h4>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headinTwoB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseTwoB"
+                aria-expanded="false" aria-controls="collapseTwoB">
+                <h4 class="mb-0">
+                  CIS 2430 Object Oriented Programming <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseTwo2B" class="collapse" aria-labelledby="headingTwo2B" data-parent="#accordionExample2B">
+            <!-- Card body -->
+            <div id="collapseTwoB" class="collapse" role="tabpanel" aria-labelledby="headingTwoB" data-parent="#accordionEx1B">
               <div class="card-body">
                 This course introduces the Object Oriented (OO) approach to programming and algorithm design. Topics will include the creation and use of objects from class libraries,
                 user defined objects, inheritance, modularity, generic code, components, collections and containers, and an introduction to OO design methodologies.
               </div>
             </div>
           </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingThree2B">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2B"
-                  aria-expanded="false" aria-controls="collapseThree2B">
-                  CIS 2910 Discrete Structures in Computer II
-                </button>
-              </h4>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingThreeB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseThreeB"
+                aria-expanded="false" aria-controls="collapseThreeB">
+                <h4 class="mb-0">
+                  CIS 2910 Discrete Structures in Computer II <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseThree2B" class="collapse" aria-labelledby="headingThree2B" data-parent="#accordionExample2B">
+            <!-- Card body -->
+            <div id="collapseThreeB" class="collapse" role="tabpanel" aria-labelledby="headingThreeB" data-parent="#accordionEx1B">
               <div class="card-body">
                 This course is a further introduction to discrete structures and formal methodologies used in computer science, including sequences,
                 summations, recursion, combinatorics, discrete probability, and graph theory.
               </div>
             </div>
           </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingFourB2">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour2B"
-                  aria-expanded="false" aria-controls="collapseFour2B">
-                  CIS 2520 Data Structures
-                </button>
-              </h4>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingourB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseFourB"
+                aria-expanded="false" aria-controls="collapseFourB">
+                <h4 class="mb-0">
+                  CIS 2520 Data Structures <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseFour2B" class="collapse" aria-labelledby="headingFour2B" data-parent="#accordionExample2B">
+            <!-- Card body -->
+            <div id="collapseFourB" class="collapse" role="tabpanel" aria-labelledby="headingFourB" data-parent="#accordionEx1B">
               <div class="card-body">
                 This course is a study of basic data structures, such as lists, stacks, queues, trees, and tables. Topics which will be examined include
                 abstract data types, sequential and linked representations, and an introduction to algorithm analysis; various traversal, search, insertion,
@@ -463,32 +538,40 @@
               </div>
             </div>
           </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingFive2B">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive2B"
-                  aria-expanded="false" aria-controls="collapseFive2B">
-                  CIS 2170 User Interface Design
-                </button>
-              </h4>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headinFiveB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseFiveB"
+                aria-expanded="false" aria-controls="collapseFiveB">
+                <h4 class="mb-0">
+                  CIS 2170 User Interface Design <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseFive2B" class="collapse" aria-labelledby="headingFive2B" data-parent="#accordionExample2B">
+            <!-- Card body -->
+            <div id="collapseFiveB" class="collapse" role="tabpanel" aria-labelledby="headingFiveB" data-parent="#accordionEx1B">
               <div class="card-body">
                 This course is a practical introduction to the area of user interface construction. Topics include user interface components and their application,
                 best practices for user interface design, approaches to prototyping, and techniques for assessing interface suitability.
               </div>
             </div>
           </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingSix2B">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix2B"
-                  aria-expanded="false" aria-controls="collapseSix2B">
-                  MATH 1200 Calculus II
-                </button>
-              </h4>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingixB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseSixB"
+                aria-expanded="false" aria-controls="collapseSixB">
+                <h4 class="mb-0">
+                  MATH 1200 Calculus II <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseSix2B" class="collapse" aria-labelledby="headingSix2B" data-parent="#accordionExample2B">
+            <!-- Card body -->
+            <div id="collapseSixB" class="collapse" role="tabpanel" aria-labelledby="headingSixB" data-parent="#accordionEx1B">
               <div class="card-body">
                 This course is a continuation of MATH*1200. It is a theoretical course intended primarily for students who need or expect
                 to pursue further studies in mathematics, physics, chemistry, engineering and computer science. Topics include inverse functions,
@@ -498,16 +581,20 @@
               </div>
             </div>
           </div>
-          <div class="card z-depth-0 bordered">
-            <div class="card-header" id="headingSeven2B">
-              <h4 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven2B"
-                  aria-expanded="false" aria-controls="collapseSeven2B">
-                  MATH 1200 Calculus I
-                </button>
-              </h4>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header blue lighten-1" role="tab" id="headingSevenB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseSevenB"
+                aria-expanded="false" aria-controls="collapseSevenB">
+                <h4 class="mb-0">
+                  MATH 1200 Calculus I <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
             </div>
-            <div id="collapseSeven2B" class="collapse" aria-labelledby="headingSeven2B" data-parent="#accordionExample2B">
+            <!-- Card body -->
+            <div id="collapseSevenB" class="collapse" role="tabpanel" aria-labelledby="headingSevenB" data-parent="#accordionEx1B">
               <div class="card-body">
                 This is a theoretical course intended primarily for students who expect to pursue further studies in mathematics
                 and its applications. Topics include inequalities and absolute value; compound angle formulas for trigonometric
@@ -519,6 +606,8 @@
             </div>
           </div>
         </div>
+
+        <div class="col-sm-1"></div>
       </div>
     </div>
   </section>
@@ -572,7 +661,6 @@
               <li>Android App Development</li>
               <li>Complex Data Structures</li>
               <li>Linux and Windows</li>
-              <!-- <li>Complex Logic Comprehension</li> -->
             </ul>
           </div>
         </div>
@@ -652,17 +740,10 @@
 
   <script>
     new WOW().init();
-    $('#about').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', addBody('aboutBody'));
-    // $('body').scrollspy( {target: '.dotted-scrollspy'} );
-
     $(function () { $('[data-toggle="tooltip"]').tooltip() })
 
-    function addBody(id) {
-      $('#aboutBody').addClass('animated fadeInUp slower');
-    }
-
     function setQuality() {
-      var qualities = ['Funny', 'Educated', 'Motivated', 'Adaptable', 'Ambitious', 'Considerate', 'Patient', 'Creative', 'Dedicated', 'Loyal  ']
+      var qualities = ['Funny', 'Educated', 'Motivated', 'Adaptable', 'Ambitious', 'Considerate', 'Patient', 'Creative', 'Dedicated', 'Loyal']
       var qualityIndex = Math.floor((Math.random() * qualities.length));
 
       document.getElementById('quoteBoard').innerHTML = "I Am: " + qualities[qualityIndex];
@@ -755,17 +836,17 @@
             else
               newProject += "<p>" + response[projectIndex].description + "</p>";
 
-            newProject += "<p>Primary Language: " + response[projectIndex].language + "</p>";
+            newProject += "<p>Primary Language: " + response[projectIndex].language + "</p><br><br><br>";
 
-            newProject += "<p style=\"font-size: 0.85rem; position: absolute; bottom: 35px;\">Started on: <a>" + reformatDate(response[projectIndex].created_at) + "</a></p>";
+            newProject += "<div style='position: absolute; bottom: 0;'><div class='row'><p style=\"font-size: 0.85rem; position: absolute; bottom: 30px; left: 10px;\">Started on: <a>" + reformatDate(response[projectIndex].created_at) + "</a></p></div>";
 
-            newProject += "<a class=\"btn btn-md\" style=\"position: absolute; bottom: 0; background-color: " + colours[projectIndex] + "\" href=\"" + response[projectIndex].html_url + "\" target=\"_blank\"\>Check out on Github!</a></div>";
+            newProject += "<a class=\"row btn btn-md\" style=\"background-color: " + colours[projectIndex] + "\" href=\"" + response[projectIndex].html_url + "\" target=\"_blank\"\>Check out on Github!</a></div></div>";
 
             // If odd index, ad the image to the right side of the screen
             if (projectIndex % 2 == 1)
               newProject += buildImageDiv(icon, response[projectIndex].name);
 
-            newProject += "</div></div></div><hr class=\"my-5\">";
+            newProject += "</div><hr class=\"my-5\">";
 
             $("#projectsBody").append(newProject);
           }
