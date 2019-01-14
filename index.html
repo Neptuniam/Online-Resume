@@ -777,7 +777,7 @@
       var newProject = "<div class=\"col-lg-5\"><div class=\"view overlay rounded z-depth-2 mb-lg-0 mb-4\"><img class=\"img-fluid\" style=\"min-height: 300px; margin: auto;\" src=\"";
 
       // TODO: FIX ME DEAR GOD.
-      if (projectName == 'Personal-Homepage' || projectName == 'Neptuniam.github.io' || projectName == 'Flight-Checker' || projectName == 'Remindly-V2.0' || projectName == 'Generic-Linked-List')
+      if (projectName == 'Personal-Homepage' || projectName == 'Neptuniam.github.io' || projectName == 'Flight-Checker' || projectName == 'Remindly-V2.0' || projectName == 'Generic-Linked-List' || projectName == 'Dribbble-Crawler')
         newProject += icon + "\" alt=\"Sample image\"><a href=\"" + icon + "\" target=\"_blank\">";
       else
         newProject += "img/projectImages/default.PNG\" alt=\"Sample image\"><a>";
@@ -803,7 +803,7 @@
         success: function(response) {
           console.log(response);
 
-          var colours = ['blue', 'green', 'red' , 'indigo', 'orange', 'purple', 'teal', 'lime', 'cyan'];
+          var colours = ['blue', 'green', 'red' , 'indigo', 'orange', 'purple', 'teal', 'lime', 'cyan', 'pink', 'yellow', 'amber'];
 
           for (var projectIndex = 0; projectIndex < response.length; projectIndex++) {
             var icon = "img/projectImages/" + response[projectIndex].name + ".PNG";
@@ -816,7 +816,7 @@
 
             newProject += "<div class=\"col-lg-7\"><a href=\"#!\" class=\"" + colours[projectIndex] + "-text\"><h6 class=\"font-weight-bold mb-3\">";
 
-            if (response[projectIndex].name.includes("crawler"))
+            if (response[projectIndex].name.toLowerCase().includes("crawler"))
               newProject += "<i class=\"fas fa-file-code pr-2\"></i>Web Util";
             else if (response[projectIndex].homepage)
               newProject += "<i class=\"fab fa-html5 pr-2\"></i>Web";
