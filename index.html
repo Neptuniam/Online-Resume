@@ -30,7 +30,7 @@
     } */
 
     .jumbotronStyle {
-      background-image: url(img//backgrounds//Liam-Jones-Copy.jpg) ;
+      background-image: url(img//backgrounds//Liam-Jones-Copy.jpg);
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
@@ -63,7 +63,7 @@
     }
 
     .row {
-            margin: 0;
+      margin: 0;
     }
 
     section:nth-of-type(2n) {
@@ -82,6 +82,7 @@
     section h5 {
       font-family: Katibeh;
       font-weight: bold;
+      font-size: 2rem;
     }
 
     section p {
@@ -96,10 +97,28 @@
        padding: 20px;
      }
 
+     .educationCard {
+       max-width: 700px;
+       background-image: url(img//backgrounds//education-card.jpg);
+       background-size: cover;
+     }
+
+     .educationCard h3 {
+       font-family: "Roboto Condensed";
+       color: black;
+       font-size: 2.3rem;
+     }
+
+     .educationCard p, h6 {
+       font-family: "Roboto Condensed";
+       color: black;
+       font-size: 1.4rem;
+     }
+
      #quote {
        padding-bottom: 0;
-       font-size: 0.8rem;
-       color: white;
+       font-size: 1rem;
+       color: black;
      }
 
      #skillsBody h3 {
@@ -117,7 +136,7 @@
 
      .AofFLeft  {
        list-style-type: none;
-       padding-right: 2px;
+       padding-right: 0px;
        text-align: right;
      }
 
@@ -133,13 +152,14 @@
      }
 
      .card-header {
-       /* background-color: blue; */
+       background-image: url(img//backgrounds//accordian-header.jpg);
+       background-size: cover;
      }
 
      .card h4 {
        font-family: "Roboto Condensed";
        font-size: 1.2rem;
-       color: white;
+       color: black;
      }
 
      .card .card-body {
@@ -149,20 +169,7 @@
        background-color: white;
      }
 
-      #accordionEx1 h4 {
-        text-align: right;
-      }
-
-      #accordionEx1 i {
-       position: absolute;
-       left: 1em;
-     }
-
-     #accordionEx1B h4 {
-       text-align: left;
-     }
-
-     #accordionEx1B i {
+     #accordionEx1 i {
        position: absolute;
        right: 1em;
      }
@@ -194,7 +201,9 @@
         <h1 class="card-title h2 my-4 py-2">Liam A. Jones</h1>
         <p class="mb-4 pb-2 px-md-5 mx-md-5">Junior Computer Scientist</p>
         <br>
-        <p class="mb-4 pb-2 px-md-5 mx-md-5"  id="quoteBoard"></p>
+
+        <p class="mb-4 pb-2 px-md-5 mx-md-5"><span>I am </span><span  id="quoteBoard"></span></p>
+
         <br>
         <br>
 
@@ -213,8 +222,7 @@
   <!-- About Me Section -->
   <section class="text-center wow fadeInUp" data-wow-delay="0.2s" id="about">
     <!-- About Me title -->
-    <h2 class="sectionTitle">All About Me!</h2>
-
+    <h2 class="sectionTitle">All About Me</h2>
 
     <!-- <div class="testimonial wow fadeInUp" data-wow-delay="0.3s"> -->
     <!--Avatar-->
@@ -224,11 +232,12 @@
 
     <!--Content-->
     <p>
-      Hi! I'm a fourth year student at the Univeristy of Guelph on course to graduate with a bachelors degree in Computer Science next December.<br>
-      Over the last few years I have spent many hours expanding on my knowledge and skills as a programmer which will be demonstrated down in the Projects section. <br>
+      Hi! I'm a fourth year student at the Univeristy of Guelph on course to graduate with a bachelors degree in Computer Science next December.
+      Over the last few years I have spent many hours expanding on my knowledge and skills as a programmer which will be demonstrated down in the Projects section.
       When I'm not taking on new programming projects with my friends and roommates, I enjoy playing many brain testing video games, watching Netflix, hitting the gym, and hanging out with friends and family.
     </p>
-    <h5 id="age" style="font-size: 2rem;">Liam Andrew Jones,</h5>
+
+    <h5 id="age" style="font-size: 2.75rem;">Liam Andrew Jones,</h5>
     <h5>Guelph, On. - Calgary Ab.</h5>
   </section>
 
@@ -247,12 +256,12 @@
     <!-- School Cards -->
     <div class="row justify-content-around">
       <!-- Guelph Card -->
-      <div class="col-sm-5 card blue lighten-2 text-white text-center p-3 mt-2 mb-3" style="max-width: 700px;">
+      <div class="col-sm-5 card educationCard text-center p-3 mt-2 mb-3">
         <blockquote class="blockquote">
           <h3>Univeristy of Guelph</h3>
           <h6>Bachelor of Computing, Honours Computer Science</h6>
           <h6>Guelph, Ontario</h6>
-          <p style="color: white;">
+          <p>
             Currently on track to complete a bachelors degree at the university level in computer science in December 2019.
             So far in my education, I have completed a wide variety of classes making me a very adaptable programmer. Current year of enrollment: Fourth.
           </p>
@@ -263,20 +272,18 @@
             "You are always a student, never a master. You have to keep moving forward."
           </p>
           <footer class="blockquote-footer">
-            <small>
-              <cite title="Source Title">Conrad Hall</cite>
-            </small>
+            <cite title="Source Title">Conrad Hall</cite>
           </footer>
         </blockquote>
       </div>
 
       <!-- Nelson Card -->
-      <div class="col-sm-5 card blue lighten-2 text-white text-center p-3 mt-2 mb-3" style="max-width: 700px;">
+      <div class="col-sm-5 card educationCard text-center p-3 mt-2 mb-3">
         <blockquote class="blockquote mb-0">
           <h3>Nelson High School</h3>
           <h6>Academic Course Stream</h6>
           <h6>Burlington, Ontario</h6>
-          <p style="color: white;">
+          <p>
             Obtained my High School diploma in 2015 at Nelson High School in Burlington, Ontario.
             Completed all courses at the Academic level, with an 80% average.
             This is where I began my programming journey, taking 3 years of CS focusing on Java.
@@ -289,9 +296,7 @@
             "The roots of education are bitter, but the fruit is sweet."
           </p>
           <footer class="blockquote-footer">
-            <small>
-              <cite title="Source Title">Aristotle</cite>
-            </small>
+            <cite title="Source Title">Aristotle</cite>
           </footer>
         </blockquote>
       </div>
@@ -305,16 +310,16 @@
         </div>
       </div>
 
-      <div class="row container-fluid">
+      <div class="row container-fluid" id="accordionEx1">
 
         <div class="col-sm-1"></div>
 
         <!--Accordion wrapper-->
-        <div class="col-sm-5 accordion md-accordion" id="accordionEx1" role="tablist" aria-multiselectable="true">
+        <div class="col-sm-5 accordion md-accordion" role="tablist" aria-multiselectable="true">
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingFive5A">
+            <div class="card-header" role="tab" id="headingFive5A">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseFive51A"
                 aria-expanded="false" aria-controls="collapseFive51A">
                 <h4 class="mb-0">
@@ -335,7 +340,7 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingTwo1A">
+            <div class="card-header" role="tab" id="headingTwo1A">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo1A"
                 aria-expanded="false" aria-controls="collapseTwo1A">
                 <h4 class="mb-0">
@@ -356,7 +361,7 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingTwo2A">
+            <div class="card-header" role="tab" id="headingTwo2A">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo21A"
                 aria-expanded="false" aria-controls="collapseTwo21A">
                 <h4 class="mb-0">
@@ -377,7 +382,7 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingFour1A">
+            <div class="card-header" role="tab" id="headingFour1A">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseFour1A"
                 aria-expanded="false" aria-controls="collapseFour1A">
                 <h4 class="mb-0">
@@ -397,7 +402,7 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingSix6A">
+            <div class="card-header" role="tab" id="headingSix6A">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseSix61A"
                 aria-expanded="false" aria-controls="collapseSix61A">
                 <h4 class="mb-0">
@@ -417,7 +422,7 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingSevenA">
+            <div class="card-header" role="tab" id="headingSevenA">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseSeven1A"
                 aria-expanded="false" aria-controls="collapseSeven1A">
                 <h4 class="mb-0">
@@ -438,7 +443,7 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingEight1A">
+            <div class="card-header" role="tab" id="headingEight1A">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseEight1A"
                 aria-expanded="false" aria-controls="collapseEight1A">
                 <h4 class="mb-0">
@@ -458,12 +463,12 @@
         </div>
 
         <!--Accordion wrapper-->
-        <div class="col-sm-5 accordion md-accordion" id="accordionEx1B" role="tablist" aria-multiselectable="true">
+        <div class="col-sm-5 accordion md-accordion" role="tablist" aria-multiselectable="true">
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingOneB">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseOneB"
+            <div class="card-header" role="tab" id="headingOneB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseOneB"
                 aria-expanded="false" aria-controls="collapseOneB">
                 <h4 class="mb-0">
                   CIS 3490 Analysis & Design of Computer Algorithms <i class="fas fa-angle-down rotate-icon"></i>
@@ -471,7 +476,7 @@
               </a>
             </div>
             <!-- Card body -->
-            <div id="collapseOneB" class="collapse" role="tabpanel" aria-labelledby="headingOneB" data-parent="#accordionEx1B">
+            <div id="collapseOneB" class="collapse" role="tabpanel" aria-labelledby="headingOneB" data-parent="#accordionEx1">
               <div class="card-body">
                 The design and analysis of efficient computer algorithms are studied. Topics which will be studied include: standard methodologies,
                 asymptotic behaviour, optimality, lower bounds, implementation considerations, graph algorithms, matrix computations (e.g. Strassen's method), NP-completeness.
@@ -482,8 +487,8 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headinTwoB">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseTwoB"
+            <div class="card-header" role="tab" id="headinTwoB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwoB"
                 aria-expanded="false" aria-controls="collapseTwoB">
                 <h4 class="mb-0">
                   CIS 2430 Object Oriented Programming <i class="fas fa-angle-down rotate-icon"></i>
@@ -491,7 +496,7 @@
               </a>
             </div>
             <!-- Card body -->
-            <div id="collapseTwoB" class="collapse" role="tabpanel" aria-labelledby="headingTwoB" data-parent="#accordionEx1B">
+            <div id="collapseTwoB" class="collapse" role="tabpanel" aria-labelledby="headingTwoB" data-parent="#accordionEx1">
               <div class="card-body">
                 This course introduces the Object Oriented (OO) approach to programming and algorithm design. Topics will include the creation and use of objects from class libraries,
                 user defined objects, inheritance, modularity, generic code, components, collections and containers, and an introduction to OO design methodologies.
@@ -502,8 +507,8 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingThreeB">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseThreeB"
+            <div class="card-header" role="tab" id="headingThreeB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseThreeB"
                 aria-expanded="false" aria-controls="collapseThreeB">
                 <h4 class="mb-0">
                   CIS 2910 Discrete Structures in Computer II <i class="fas fa-angle-down rotate-icon"></i>
@@ -511,7 +516,7 @@
               </a>
             </div>
             <!-- Card body -->
-            <div id="collapseThreeB" class="collapse" role="tabpanel" aria-labelledby="headingThreeB" data-parent="#accordionEx1B">
+            <div id="collapseThreeB" class="collapse" role="tabpanel" aria-labelledby="headingThreeB" data-parent="#accordionEx1">
               <div class="card-body">
                 This course is a further introduction to discrete structures and formal methodologies used in computer science, including sequences,
                 summations, recursion, combinatorics, discrete probability, and graph theory.
@@ -522,8 +527,8 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingourB">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseFourB"
+            <div class="card-header" role="tab" id="headingourB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseFourB"
                 aria-expanded="false" aria-controls="collapseFourB">
                 <h4 class="mb-0">
                   CIS 2520 Data Structures <i class="fas fa-angle-down rotate-icon"></i>
@@ -531,7 +536,7 @@
               </a>
             </div>
             <!-- Card body -->
-            <div id="collapseFourB" class="collapse" role="tabpanel" aria-labelledby="headingFourB" data-parent="#accordionEx1B">
+            <div id="collapseFourB" class="collapse" role="tabpanel" aria-labelledby="headingFourB" data-parent="#accordionEx1">
               <div class="card-body">
                 This course is a study of basic data structures, such as lists, stacks, queues, trees, and tables. Topics which will be examined include
                 abstract data types, sequential and linked representations, and an introduction to algorithm analysis; various traversal, search, insertion,
@@ -543,8 +548,8 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headinFiveB">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseFiveB"
+            <div class="card-header" role="tab" id="headinFiveB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseFiveB"
                 aria-expanded="false" aria-controls="collapseFiveB">
                 <h4 class="mb-0">
                   CIS 2170 User Interface Design <i class="fas fa-angle-down rotate-icon"></i>
@@ -552,7 +557,7 @@
               </a>
             </div>
             <!-- Card body -->
-            <div id="collapseFiveB" class="collapse" role="tabpanel" aria-labelledby="headingFiveB" data-parent="#accordionEx1B">
+            <div id="collapseFiveB" class="collapse" role="tabpanel" aria-labelledby="headingFiveB" data-parent="#accordionEx1">
               <div class="card-body">
                 This course is a practical introduction to the area of user interface construction. Topics include user interface components and their application,
                 best practices for user interface design, approaches to prototyping, and techniques for assessing interface suitability.
@@ -563,8 +568,8 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingixB">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseSixB"
+            <div class="card-header" role="tab" id="headingixB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseSixB"
                 aria-expanded="false" aria-controls="collapseSixB">
                 <h4 class="mb-0">
                   MATH 1200 Calculus II <i class="fas fa-angle-down rotate-icon"></i>
@@ -572,7 +577,7 @@
               </a>
             </div>
             <!-- Card body -->
-            <div id="collapseSixB" class="collapse" role="tabpanel" aria-labelledby="headingSixB" data-parent="#accordionEx1B">
+            <div id="collapseSixB" class="collapse" role="tabpanel" aria-labelledby="headingSixB" data-parent="#accordionEx1">
               <div class="card-body">
                 This course is a continuation of MATH*1200. It is a theoretical course intended primarily for students who need or expect
                 to pursue further studies in mathematics, physics, chemistry, engineering and computer science. Topics include inverse functions,
@@ -586,8 +591,8 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header blue lighten-1" role="tab" id="headingSevenB">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1B" href="#collapseSevenB"
+            <div class="card-header" role="tab" id="headingSevenB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseSevenB"
                 aria-expanded="false" aria-controls="collapseSevenB">
                 <h4 class="mb-0">
                   MATH 1200 Calculus I <i class="fas fa-angle-down rotate-icon"></i>
@@ -595,7 +600,7 @@
               </a>
             </div>
             <!-- Card body -->
-            <div id="collapseSevenB" class="collapse" role="tabpanel" aria-labelledby="headingSevenB" data-parent="#accordionEx1B">
+            <div id="collapseSevenB" class="collapse" role="tabpanel" aria-labelledby="headingSevenB" data-parent="#accordionEx1">
               <div class="card-body">
                 This is a theoretical course intended primarily for students who expect to pursue further studies in mathematics
                 and its applications. Topics include inequalities and absolute value; compound angle formulas for trigonometric
@@ -670,7 +675,7 @@
       <!-- Libraries and Frameworks Col -->
       <div class="col-md-3">
         <i class="fas fa-code fa-3x orange-text"></i>
-        <h3>Open Source Libraries and Frameworks</h3>
+        <h3>Open Source Libraries<br>and Frameworks</h3>
         <p>
           MDB, Bootstrap 3/5, Materialize, <br>
           JQuery, Ajax, and Requests.
@@ -738,16 +743,23 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Typed JS -->
+  <script type="text/javascript" src="js/typed.js/lib/typed.js"></script>
 
   <script>
     new WOW().init();
     $(function () { $('[data-toggle="tooltip"]').tooltip() })
 
     function setQuality() {
-      var qualities = ['Funny', 'Educated', 'Motivated', 'Adaptable', 'Ambitious', 'Considerate', 'Patient', 'Creative', 'Dedicated', 'Loyal']
-      var qualityIndex = Math.floor((Math.random() * qualities.length));
-
-      document.getElementById('quoteBoard').innerHTML = "I Am: " + qualities[qualityIndex];
+      var typed = new Typed('#quoteBoard', {
+        strings: ['funny.', 'educated.', 'motivated.', 'adaptable.', 'ambitious.', 'considerate.', 'patient.', 'creative', 'dedicated.', 'loyal.'],
+        typeSpeed: 75,
+        backSpeed: 50,
+        backDelay: 2000,
+        shuffle: true,
+        loop: true,
+        loopCount: Infinity
+      });
     }
 
     function getAge(dateString) {
@@ -794,7 +806,6 @@
     updateAge();
     updateCopyright();
     setQuality();
-    setInterval(function() { setQuality(); }, 5000);
 
     $(document).ready(function() {
       $.ajax({
@@ -803,7 +814,7 @@
         success: function(response) {
           console.log(response);
 
-          var colours = ['blue', 'green', 'red' , 'indigo', 'orange', 'purple', 'teal', 'lime', 'cyan', 'pink', 'yellow', 'amber'];
+          var colours = ['blue', 'green', 'red'];
 
           for (var projectIndex = 0; projectIndex < response.length; projectIndex++) {
             var icon = "img/projectImages/" + response[projectIndex].name + ".PNG";
@@ -814,7 +825,8 @@
             if (projectIndex % 2 == 0)
               newProject += buildImageDiv(icon, response[projectIndex].name);
 
-            newProject += "<div class=\"col-lg-7\"><a href=\"#!\" class=\"" + colours[projectIndex] + "-text\"><h6 class=\"font-weight-bold mb-3\">";
+            // newProject += "<div class=\"col-lg-7\"><a href=\"#!\" class=\"" + colours[projectIndex % 3] + "-text\"><h6 class=\"font-weight-bold mb-3\">";
+            newProject += "<div class=\"col-lg-7\"><h6 class=\"" + colours[projectIndex % 3] + "-text font-weight-bold mb-3\">";
 
             if (response[projectIndex].name.toLowerCase().includes("crawler"))
               newProject += "<i class=\"fas fa-file-code pr-2\"></i>Web Util";
@@ -825,7 +837,7 @@
             else
               newProject += "<i class=\"fas fa-code pr-2\"></i>CLI";
 
-            newProject += "</h6></a><h3 class=\"font-weight-bold mb-3\"><strong>" + response[projectIndex].name;
+            newProject += "</h6><h3 class=\"font-weight-bold mb-3\"><strong>" + response[projectIndex].name;
 
             if (response[projectIndex].homepage)
               newProject += " - <a href=\"" + response[projectIndex].homepage + "\" target=\"_blank\">See me online!</a>";
@@ -841,7 +853,7 @@
 
             newProject += "<div style='position: absolute; bottom: 0;'><div class='row'><p style=\"font-size: 0.85rem; position: absolute; bottom: 30px; left: 10px;\">Started on: <a>" + reformatDate(response[projectIndex].created_at) + "</a></p></div>";
 
-            newProject += "<a class=\"row btn btn-md\" style=\"background-color: " + colours[projectIndex] + "\" href=\"" + response[projectIndex].html_url + "\" target=\"_blank\"\>Check out on Github!</a></div></div>";
+            newProject += "<a class=\"row btn btn-md\" style=\"background-color: " + colours[projectIndex % 3] + "\" href=\"" + response[projectIndex].html_url + "\" target=\"_blank\"\>Check out on Github!</a></div></div>";
 
             // If odd index, ad the image to the right side of the screen
             if (projectIndex % 2 == 1)
