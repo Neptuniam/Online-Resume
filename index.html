@@ -89,6 +89,8 @@
       font-family: "Roboto Condensed";
       font-size: 1.5rem;
       color: gray;
+
+
     }
 
     .avatar {
@@ -128,7 +130,7 @@
        padding-top: 1.2rem;
      }
 
-     .AofFList {
+     ul {
        font-family: "Roboto Condensed";
        font-size: 1.5rem;
        color: gray;
@@ -174,6 +176,14 @@
        right: 1em;
      }
 
+     .projectDate {
+        font-family: "Roboto Condensed";
+        font-size: 0.9rem;
+        position: absolute;
+        bottom: 30px;
+        left: 10px;
+     }
+
      /* Mobile specific classes */
      @media screen and (max-width: 480px) {
       .AofFLeft, .AofFRight { text-align: center; }
@@ -191,7 +201,7 @@
   </style>
 </head>
 
-<body style="position: relative;" data-spy="scroll" data-target=".navbar-nav">
+<body>
   <!-- Jumbotron -->
   <div class="card card-image jumbotronStyle noselect">
     <div class="text-white text-center rgba-stylish-strong py-5 px-4">
@@ -231,11 +241,15 @@
     </div>
 
     <!--Content-->
-    <p>
-      Hi! I'm a fourth year student at the Univeristy of Guelph on course to graduate with a bachelors degree in Computer Science next December.
-      Over the last few years I have spent many hours expanding on my knowledge and skills as a programmer which will be demonstrated down in the Projects section.
-      When I'm not taking on new programming projects with my friends and roommates, I enjoy playing many brain testing video games, watching Netflix, hitting the gym, and hanging out with friends and family.
-    </p>
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <p class="col-sm-10">
+        Hi! I'm a fourth year student at the Univeristy of Guelph on course to graduate with a bachelors degree in Computer Science next December.
+        Over the last few years I have spent many hours expanding on my knowledge and skills as a programmer which is displayed down in the Projects section.
+        When I'm not taking on new programming projects with my friends and roommates, I enjoy playing many brain testing video games, watching Netflix, hitting the gym, and hanging out with friends and family.
+      </p>
+      <div class="col-sm-1"></div>
+    </div>
 
     <h5 id="age" style="font-size: 2.75rem;">Liam Andrew Jones,</h5>
     <h5>Guelph, On. - Calgary Ab.</h5>
@@ -263,7 +277,7 @@
           <h6>Guelph, Ontario</h6>
           <p>
             Currently on track to complete a bachelors degree at the university level in computer science in December 2019.
-            So far in my education, I have completed a wide variety of classes making me a very adaptable programmer. Current year of enrollment: Fourth.
+            So far in my education, I have completed a wide variety of classes making me a very adaptable programmer. Anticipated Graduation Date: December 2019.
           </p>
           <br>
           <br>
@@ -286,7 +300,7 @@
           <p>
             Obtained my High School diploma in 2015 at Nelson High School in Burlington, Ontario.
             Completed all courses at the Academic level, with an 80% average.
-            This is where I began my programming journey, taking 3 years of CS focusing on Java.
+            This is where I began my programming journey, taking 3 years of Computer Science focused on Java.
           </p>
           <br>
           <br>
@@ -645,16 +659,16 @@
         <h3>Areas of Focus</h3>
 
         <!-- Areas of focus list -->
-        <div class="row AofFList">
+        <div class="row">
           <!-- Left side of list -->
           <div class="col-sm-6">
             <ul class="AofFLeft">
               <li>UI/UX Design</li>
-              <li>Web Scraping</li>
-              <li>O-O Programming</li>
+              <li>Website Scraping</li>
+              <li>Regular Expressions</li>
               <li>Low-Level Engineering</li>
               <li>Complex Algorithms</li>
-              <li>Regular expressions</li>
+              <li>O-O Programming</li>
             </ul>
           </div>
 
@@ -692,7 +706,7 @@
     <!-- Projects Body -->
     <div id="projectsBody">
       <p id="bodySubTitle">
-        Here's all of my notable projects pulled dynamically from the Github API!
+        Here's a bunch of my most notable projects pulled dynamically from the Github API!
       </p>
     </div>
   </section>
@@ -786,15 +800,15 @@
     }
 
     function buildImageDiv(icon, projectName) {
-      var newProject = "<div class=\"col-lg-5\"><div class=\"view overlay rounded z-depth-2 mb-lg-0 mb-4\"><img class=\"img-fluid\" style=\"min-height: 300px; margin: auto;\" src=\"";
+      var newProject = "<div class='col-lg-5'><div class='view overlay rounded z-depth-2 mb-lg-0 mb-4'><img class='img-fluid' style='min-height: 300px; margin: auto;' src='";
 
       // TODO: FIX ME DEAR GOD.
       if (projectName == 'Personal-Homepage' || projectName == 'Neptuniam.github.io' || projectName == 'Flight-Checker' || projectName == 'Remindly-V2.0' || projectName == 'Generic-Linked-List' || projectName == 'Dribbble-Crawler')
-        newProject += icon + "\" alt=\"Sample image\"><a href=\"" + icon + "\" target=\"_blank\">";
+        newProject += icon + "' alt='Sample image'><a href='" + icon + "' target='_blank'>";
       else
-        newProject += "img/projectImages/default.PNG\" alt=\"Sample image\"><a>";
+        newProject += "img/projectImages/default.PNG' alt='Sample image'><a>";
 
-      newProject += "<div class=\"mask rgba-white-slight\"></div></a></div></div>";
+      newProject += "<div class='mask rgba-white-slight'></div></a></div></div>";
 
       return (newProject);
     }
@@ -819,28 +833,27 @@
           for (var projectIndex = 0; projectIndex < response.length; projectIndex++) {
             var icon = "img/projectImages/" + response[projectIndex].name + ".PNG";
 
-            var newProject = "<div class=\"row\">";
+            var newProject = "<div class='row'>";
 
             // If even index, add image to left of screen
             if (projectIndex % 2 == 0)
               newProject += buildImageDiv(icon, response[projectIndex].name);
 
-            // newProject += "<div class=\"col-lg-7\"><a href=\"#!\" class=\"" + colours[projectIndex % 3] + "-text\"><h6 class=\"font-weight-bold mb-3\">";
-            newProject += "<div class=\"col-lg-7\"><h6 class=\"" + colours[projectIndex % 3] + "-text font-weight-bold mb-3\">";
+            newProject += "<div class='col-lg-7''><h6 class='" + colours[projectIndex % 3] + "-text font-weight-bold mb-3'>";
 
             if (response[projectIndex].name.toLowerCase().includes("crawler"))
-              newProject += "<i class=\"fas fa-file-code pr-2\"></i>Web Util";
+              newProject += "<i class='fas fa-file-code pr-2'></i>Web Util";
             else if (response[projectIndex].homepage)
-              newProject += "<i class=\"fab fa-html5 pr-2\"></i>Web";
+              newProject += "<i class='fab fa-html5 pr-2'></i>Web";
             else if(response[projectIndex].name.includes("Remindly"))
-              newProject += "<i class=\"fab fa-android pr-2\"></i>Android";
+              newProject += "<i class='fab fa-android pr-2'></i>Android";
             else
-              newProject += "<i class=\"fas fa-code pr-2\"></i>CLI";
+              newProject += "<i class='fas fa-code pr-2'></i>CLI";
 
-            newProject += "</h6><h3 class=\"font-weight-bold mb-3\"><strong>" + response[projectIndex].name;
+            newProject += "</h6><h3 class='font-weight-bold mb-3'><strong>" + response[projectIndex].name;
 
             if (response[projectIndex].homepage)
-              newProject += " - <a href=\"" + response[projectIndex].homepage + "\" target=\"_blank\">See me online!</a>";
+              newProject += " - <a href='" + response[projectIndex].homepage + "' target='_blank'>See me online!</a>";
 
             newProject += "</strong></h3>";
 
@@ -851,15 +864,15 @@
 
             newProject += "<p>Primary Language: " + response[projectIndex].language + "</p><br><br><br>";
 
-            newProject += "<div style='position: absolute; bottom: 0;'><div class='row'><p style=\"font-size: 0.85rem; position: absolute; bottom: 30px; left: 10px;\">Started on: <a>" + reformatDate(response[projectIndex].created_at) + "</a></p></div>";
+            newProject += "<div style='position: absolute; bottom: 0;'><div class='row'><p class='projectDate'>Started on: " + reformatDate(response[projectIndex].created_at) + "</p></div>";
 
-            newProject += "<a class=\"row btn btn-md\" style=\"background-color: " + colours[projectIndex % 3] + "\" href=\"" + response[projectIndex].html_url + "\" target=\"_blank\"\>Check out on Github!</a></div></div>";
+            newProject += "<a class='row btn btn-md' style='background-color: " + colours[projectIndex % 3] + "' href='" + response[projectIndex].html_url + "' target='_blank'>Check out on Github!</a></div></div>";
 
             // If odd index, ad the image to the right side of the screen
             if (projectIndex % 2 == 1)
               newProject += buildImageDiv(icon, response[projectIndex].name);
 
-            newProject += "</div><hr class=\"my-5\">";
+            newProject += "</div><hr class='my-5'>";
 
             $("#projectsBody").append(newProject);
           }
