@@ -60,6 +60,35 @@
       margin: 0;
     }
 
+    #workExperience .row {
+        margin: 50px;
+    }
+
+    .workDesc {
+        margin: 50px 0;
+    }
+
+    .job {
+        font-weight: 500;
+        font-size: 35px;
+    }
+
+    .jobTitle {
+        font-weight: 350;
+        font-size: 22px;
+    }
+
+    .workDesc .date {
+        font-weight: 200px;
+        font-size: 12px;
+        color: grey;
+    }
+
+    .workDesc p {
+        font-size: 18px;
+        margin: 30px 0 0 0;
+    }
+
     section:nth-of-type(2n) {
       background: rgba(217, 217, 217, 0.4);
     }
@@ -224,7 +253,7 @@
   <!-- About Me Section -->
   <section class="text-center wow fadeInUp" data-wow-delay="0.2s" id="about">
     <!-- About Me title -->
-    <h2 class="sectionTitle">All About Me</h2>
+    <h2 class="sectionTitle">About Me</h2>
 
     <!-- <div class="testimonial wow fadeInUp" data-wow-delay="0.3s"> -->
     <!--Avatar-->
@@ -245,6 +274,70 @@
 
     <h5 id="age" style="font-size: 2.75rem;">Liam Andrew Jones,</h5>
     <h5>Guelph, On. - Calgary Ab.</h5>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section class="text-center wow fadeInUp" data-wow-delay="0.2s" id="workExperience">
+    <h2 class="sectionTitle">Work Experience</h2>
+
+    <div class="row justify-content-center">
+        <img class="col-sm-3" src="img//jobs//nobal.jpg" alt="Nobal Tech.">
+        <div class="col-sm-8 text-left workDesc">
+            <div class="job">
+                <a href="http://imirror.nobal.ca/" target="_blank">
+                    Nobal Technologies.
+                </a>
+            </div>
+            <div class="jobTitle">
+                Web Developer
+            </div>
+            <div class="date">
+                May 2019 - Ongoing
+            </div>
+
+            <p>
+                Internship + continued part time (remote) work on the web development
+                team of Nobal Technologies. <br>
+                Taken lead on the complete rebuild
+                and redesign of Nobal’s CMS in order to provide both developers
+                and clients with the most seamless experience for maintaining
+                and working with Nobal’s iMirror. As early as the second week,
+                tasks included deciding which frameworks to use and designing
+                abstract systems for the site to be built off.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row justify-content-center">
+        <img class="col-sm-3" src="img//jobs//guelph.png" alt="Nobal Tech.">
+        <div class="col-sm-8 text-left workDesc">
+            <div class="job">
+                <a href="http://imirror.nobal.ca/" target="_blank">
+                    Univeristy of Guelph
+                </a>
+            </div>
+            <div class="jobTitle">
+                Teaching Assitant
+            </div>
+            <div class="date">
+                Sept. 2018 - Dec. 2018
+            </div>
+
+            <p>
+                Temporary Teaching Assistant contract for the course CIS 2030:
+                Structure and Application of Microcomputers. <br>
+                This experience allowed
+                me to gain hands on experience, helping to guide younger students
+                as they take on the next phase of their careers as software
+                developers working directly with dozens of students at a time in
+                labs. It also allowed me to deepen my understanding of the
+                low-level concepts involved in how computers operate.
+            </p>
+        </div>
+
+    </div>
   </section>
 
   <!-- Education Section -->
@@ -767,8 +860,8 @@
         <i class="fas fa-code fa-3x orange-text"></i>
         <h3>Frameworks and Libraries</h3>
         <p>
-          Vue, JQuery, Ajax, JFlex, CUP, REST,
-          MDB, Materialize, Bootstrap 3-5, UIkit.
+          VueJS, JQuery, Ajax, JFlex, CUP, REST,
+          MDB, Materialize, UIkit, Bootstrap 3-5.
         </p>
       </div>
     </div>
@@ -840,6 +933,8 @@
     new WOW().init();
     $(function () { $('[data-toggle="tooltip"]').tooltip() })
 
+
+
     function setQuality() {
       var typed = new Typed('#quoteBoard', {
         strings: ['funny.', 'educated.', 'motivated.', 'adaptable.', 'ambitious.', 'considerate.', 'patient.', 'creative.', 'dedicated.', 'loyal.', 'Liam.'],
@@ -876,11 +971,21 @@
     }
 
     function buildImageDiv(icon, projectName) {
+      // Learn real js to not recreate this every call
+      let imgMap = {
+        'Personal-Homepage' : 'Personal-Homepage' ,
+        'Neptuniam.github.io' : 'Neptuniam.github.io' ,
+        'Flight-Checker' : 'Flight-Checker' ,
+        'Remindly-V2.0' : 'Remindly-V2.0' ,
+        'Generic-Linked-List' : 'Generic-Linked-List' ,
+        'Dribbble-Crawler' : 'Dribbble-Crawler' ,
+        'surveyship': 'surveyship',
+        '134-HomepageV2': '134-HomepageV2'
+      }
+      
       var newProject = "<div class='col-lg-5'><div class='view overlay rounded z-depth-2 mb-lg-0 mb-4'><img class='img-fluid' style='min-height: 300px; margin: auto;' src='";
 
-      // TODO: FIX ME DEAR GOD.
-      if (projectName == 'Personal-Homepage' || projectName == 'Neptuniam.github.io' || projectName == 'Flight-Checker' ||
-          projectName == 'Remindly-V2.0' || projectName == 'Generic-Linked-List' || projectName == 'Dribbble-Crawler' || projectName == 'surveyship')
+      if (imgMap[projectName])
         newProject += icon + "' alt='Sample image'><a href='" + icon + "' target='_blank'>";
       else
         newProject += "img/projectImages/default.PNG' alt='Sample image'><a>";
