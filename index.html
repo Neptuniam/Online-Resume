@@ -17,8 +17,6 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link href="css/style.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-latest.js"></script>
 
@@ -64,8 +62,13 @@
         margin: 50px;
     }
 
+    #workExperience img {
+        max-height: 400px;
+        max-width: 100%;
+    }
+
     .workDesc {
-        margin: 50px 0;
+        /* margin: 50px 0; */
     }
 
     .job {
@@ -112,10 +115,14 @@
       font-family: "Roboto Condensed";
       font-size: 1.5rem;
       color: rgb(72,72,72);
+  }
+
+    #about p {
+        margin-top: 50px;
     }
 
     .avatar {
-       width: 15em;
+       width: 20em;
        margin: auto;
        padding: 20px;
      }
@@ -230,7 +237,7 @@
         <!-- Content -->
         <br>
         <h1 class="card-title h2 my-4 py-2">Liam A. Jones</h1>
-        <p class="mb-4 pb-2 px-md-5 mx-md-5">Junior Software Developer</p>
+        <p class="mb-4 pb-2 px-md-5 mx-md-5">Web Developer</p>
         <br>
 
         <p class="mb-4 pb-2 px-md-5 mx-md-5"><span>I am </span><span  id="quoteBoard"></span></p>
@@ -239,9 +246,21 @@
         <br>
 
         <div class="row justify-content-center">
-          <div class="col-sm-2"> <a class="btn-floating btn-lg winter-neva-gradient" href="https://github.com/neptuniam" target="_blank"><i class="fab fa-github"></i> Github</a> </div>
-          <div class="col-sm-2"> <a class="btn-floating btn-lg winter-neva-gradient" href="resume.html" target="_blank"><i class="fas fa-file-invoice"></i> Resume</a> </div>
-          <div class="col-sm-2"> <a class="btn-floating btn-lg winter-neva-gradient" href="mailto:ljones1997@hotmail.com"><i class="far fa-envelope"></i></i> Email</a> </div>
+          <div class="col-sm-2">
+            <a class="btn-floating btn-lg winter-neva-gradient" href="https://github.com/neptuniam" target="_blank">
+              <i class="fab fa-github"></i> Github
+            </a>
+          </div>
+          <div class="col-sm-2">
+            <a class="btn-floating btn-lg winter-neva-gradient" href="resume.html" target="_blank"><i class="fas fa-file-invoice">
+              </i> Resume
+            </a>
+          </div>
+          <div class="col-sm-2">
+            <a class="btn-floating btn-lg winter-neva-gradient" href="mailto:ljones1997@hotmail.com"><i class="far fa-envelope">
+              </i></i> Email
+            </a>
+          </div>
         </div>
 
         <br>
@@ -265,15 +284,17 @@
     <div class="row">
       <div class="col-sm-1"></div>
       <p class="col-sm-10">
-        Hi! I'm a fourth year student at the Univeristy of Guelph on course to graduate with a bachelors degree in Computer Science next December.
-        Over the last few years I have spent many hours expanding on my knowledge and skills as a programmer which is displayed down in the Projects section.
-        When I'm not taking on new programming projects with my friends and roommates, I enjoy playing many brain testing video games, watching Netflix, hitting the gym, and hanging out with friends and family.
+        Hi! I'm Liam, a recent graduate of the Univeristy of Guelph currently working as a web developer using frameworks such as VueJS and Laravel. <br>
+        Over the last few years I have spent many hours expanding on my knowledge and skills as a programmer which is showcased down in the <i>Projects</i> section.
+        When I'm not taking on exciting new programming projects, I enjoy playing many brain testing video games, following ARGs, hitting the gym, and spending time with friends and family.
       </p>
       <div class="col-sm-1"></div>
     </div>
 
-    <h5 id="age" style="font-size: 2.75rem;">Liam Andrew Jones,</h5>
-    <h5>Guelph, On. - Calgary Ab.</h5>
+    <h5 id="age" style="font-size: 2.75rem;">
+        Liam Andrew Jones,
+    </h5>
+    <h5>Calgary, Alberta</h5>
   </section>
 
   <!-- Work Experience Section -->
@@ -281,10 +302,13 @@
     <h2 class="sectionTitle">Work Experience</h2>
 
     <div class="row justify-content-center">
-        <img class="col-sm-3" src="img//jobs//nobal.jpg" alt="Nobal Tech.">
+        <div class="col-sm-3">
+            <img src="img//jobs//iMirror.jpg" alt="Nobal Tech.">
+        </div>
+
         <div class="col-sm-8 text-left workDesc">
             <div class="job">
-                <a href="http://imirror.nobal.ca/" target="_blank">
+                <a href="https://www.nobal.ca/" target="_blank">
                     Nobal Technologies.
                 </a>
             </div>
@@ -296,14 +320,10 @@
             </div>
 
             <p>
-                Internship + continued part time (remote) work on the web development
-                team of Nobal Technologies. <br>
-                Taken lead on the complete rebuild
-                and redesign of Nobal’s CMS in order to provide both developers
-                and clients with the most seamless experience for maintaining
-                and working with Nobal’s iMirror. As early as the second week,
-                tasks included deciding which frameworks to use and designing
-                abstract systems for the site to be built off.
+                Taken lead on the complete rebuild and redesign of Nobal’s CMS (Content Management System) in order to provide both
+                developers and clients with the most seamless experience for maintaining and working with Nobal’s iMirror. Working as a
+                Full Stack software developer on the Web Development team. As early as the second week, tasks included deciding which
+                frameworks to use and creating complicated abstract systems components for the site to be built off.
             </p>
         </div>
     </div>
@@ -311,10 +331,13 @@
     <hr>
 
     <div class="row justify-content-center">
-        <img class="col-sm-3" src="img//jobs//guelph.png" alt="Nobal Tech.">
+        <div class="col-sm-3">
+            <img src="img//jobs//guelph.webp" alt="Univeristy of Guelph">
+        </div>
+
         <div class="col-sm-8 text-left workDesc">
             <div class="job">
-                <a href="http://imirror.nobal.ca/" target="_blank">
+                <a href="https://www.uoguelph.ca/" target="_blank">
                     Univeristy of Guelph
                 </a>
             </div>
@@ -347,7 +370,7 @@
 
     <!-- Section Body -->
     <p id="bodySubTitle">
-      Several of the skills I have acquired over my many years of programming.
+      Some of the skills I have acquired over my years of programming.
     </p>
 
     <div class="row" id="skillsBody">
@@ -356,8 +379,9 @@
         <i class="fas fa-american-sign-language-interpreting fa-3x red-text"></i>
         <h3>Languages</h3>
         <p>
-          C, Java, Python, X68 Assembly,<br>
-          HTML, PHP, CSS, JavaScript.
+            HTML, CSS, JavaScript, PHP, <br>
+            C, Java, Python, X68 Assembly, <br>
+            MySQL, PostgreSQL. <br>
         </p>
       </div>
 
@@ -378,6 +402,7 @@
               <!-- <li>Artificial Intelligence</li> -->
               <li>Complex Algorithms</li>
               <li>O-O Programming</li>
+              <li>Linux</li>
             </ul>
           </div>
 
@@ -390,7 +415,8 @@
               <li>Android App Development</li>
               <!-- <li>Machine Learning</li> -->
               <li>Complex Data Structures</li>
-              <li>Linux and Windows</li>
+              <li>REST API Development</li>
+              <li>Windows</li>
             </ul>
           </div>
         </div>
@@ -401,7 +427,7 @@
         <i class="fas fa-code fa-3x orange-text"></i>
         <h3>Frameworks and Libraries</h3>
         <p>
-          VueJS, JQuery, Laravel, REST, Ajax,<br>
+          VueJS/VueX, JQuery, Laravel, REST, Ajax,<br>
           MDB, Materialize, UIkit, Bootstrap.
           <!-- JFlex, CUP. -->
         </p>
@@ -430,8 +456,9 @@
           <h6>Bachelor of Computing, Honours Computer Science</h6>
           <h6>Guelph, Ontario</h6>
           <p>
-            Currently on track to complete a bachelors degree at the university level in computer science in December 2019.
-            So far in my education, I have completed a wide variety of classes making me a very adaptable programmer. Anticipated Graduation Date: December 2019.
+            Obtained Bachelors degree at the University of Guelph in Computer Science in December of 2019. <br><br>
+            <!-- Before my graduation, I completed a wide variety of classes making me a very adaptable programmer. -->
+            Graduated with an honours degree, meaning I achieved at least a 70% average across all CS courses.
           </p>
           <br>
           <br>
@@ -452,9 +479,9 @@
           <h6>Academic Course Stream</h6>
           <h6>Burlington, Ontario</h6>
           <p>
-            Obtained my High School diploma in 2015 at Nelson High School in Burlington, Ontario.
-            Completed all courses at the Academic level, with an 80% average.
-            This is where I began my programming journey, taking 3 years of Computer Science focused on Java.
+            Obtained my High School diploma at Nelson High School in Burlington, Ontario in 2015. <br><br>
+            Completed all courses at the Academic level, with an 80% average across all courses.
+            <!-- This is where I began my programming journey, taking 3 years of Computer Science focused on Java. -->
           </p>
           <br>
           <br>
@@ -484,6 +511,53 @@
 
         <!--Accordion wrapper-->
         <div class="col-sm-5 accordion md-accordion" role="tablist" aria-multiselectable="true">
+            <!-- Accordion card -->
+            <div class="card">
+              <!-- Card header -->
+              <div class="card-header" role="tab" id="headingEightB">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseEightB"
+                  aria-expanded="false" aria-controls="collapseEightB">
+                  <h4 class="mb-0">
+                    MATH 1200 Calculus I <i class="fas fa-angle-down rotate-icon"></i>
+                  </h4>
+                </a>
+              </div>
+              <!-- Card body -->
+              <div id="collapseEightB" class="collapse" role="tabpanel" aria-labelledby="headingEightB" data-parent="#accordionEx1">
+                <div class="card-body">
+                  This is a theoretical course intended primarily for students who expect to pursue further studies in mathematics
+                  and its applications. Topics include inequalities and absolute value; compound angle formulas for trigonometric
+                  functions; limits and continuity using rigorous definitions; the derivative and derivative formulas (including
+                  derivatives of trigonometric, exponential and logarithmic functions); Fermat's theorem; Rolle's theorem; the
+                  mean-value theorem; applications of the derivative; Riemann sums; the definite integral; the fundamental theorem
+                  of calculus; applications of the definite integral; the mean value theorem for integrals.
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion card -->
+            <div class="card">
+              <!-- Card header -->
+              <div class="card-header" role="tab" id="headingNineB">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseNineB"
+                  aria-expanded="false" aria-controls="collapseNineB">
+                  <h4 class="mb-0">
+                    MATH 1200 Calculus II <i class="fas fa-angle-down rotate-icon"></i>
+                  </h4>
+                </a>
+              </div>
+              <!-- Card body -->
+              <div id="collapseNineB" class="collapse" role="tabpanel" aria-labelledby="headingNineB" data-parent="#accordionEx1">
+                <div class="card-body">
+                  This course is a continuation of MATH*1200. It is a theoretical course intended primarily for students who need or expect
+                  to pursue further studies in mathematics, physics, chemistry, engineering and computer science. Topics include inverse functions,
+                  inverse trigonometric functions, hyperbolic functions, indeterminate forms and l'Hopital's rule, techniques of integration, parametric
+                  equations, polar coordinates, Taylor and Maclaurin series; functions of two or more variables, partial derivatives, and if time permits,
+                  an introduction to multiple integration.
+                </div>
+              </div>
+            </div>
+
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
@@ -818,23 +892,21 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header" role="tab" id="headingEightB">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseEightB"
-                aria-expanded="false" aria-controls="collapseEightB">
+            <div class="card-header" role="tab" id="headingSevenB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseSevenB"
+                aria-expanded="false" aria-controls="collapseSevenB">
                 <h4 class="mb-0">
-                  MATH 1200 Calculus I <i class="fas fa-angle-down rotate-icon"></i>
+                  CIS 3210 Computer Networks <i class="fas fa-angle-down rotate-icon"></i>
                 </h4>
               </a>
             </div>
             <!-- Card body -->
-            <div id="collapseEightB" class="collapse" role="tabpanel" aria-labelledby="headingEightB" data-parent="#accordionEx1">
+            <div id="collapseSevenB" class="collapse" role="tabpanel" aria-labelledby="headingSevenB" data-parent="#accordionEx1">
               <div class="card-body">
-                This is a theoretical course intended primarily for students who expect to pursue further studies in mathematics
-                and its applications. Topics include inequalities and absolute value; compound angle formulas for trigonometric
-                functions; limits and continuity using rigorous definitions; the derivative and derivative formulas (including
-                derivatives of trigonometric, exponential and logarithmic functions); Fermat's theorem; Rolle's theorem; the
-                mean-value theorem; applications of the derivative; Riemann sums; the definite integral; the fundamental theorem
-                of calculus; applications of the definite integral; the mean value theorem for integrals.
+                  This course covers the high-level (protocol) oriented aspects of computer networks,
+                  specifically: application, session, transport and network layers. It includes the internet,
+                  socket-level programming, multimedia and quality of service issues. The hardware aspects
+                  (switches, LANs, modems, transmission paths) are covered at only a functional level.
               </div>
             </div>
           </div>
@@ -842,22 +914,66 @@
           <!-- Accordion card -->
           <div class="card">
             <!-- Card header -->
-            <div class="card-header" role="tab" id="headingNineB">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseNineB"
-                aria-expanded="false" aria-controls="collapseNineB">
+            <div class="card-header" role="tab" id="headingSevenB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseSevenB"
+                aria-expanded="false" aria-controls="collapseSevenB">
                 <h4 class="mb-0">
-                  MATH 1200 Calculus II <i class="fas fa-angle-down rotate-icon"></i>
+                    CIS 3530 Data Base Systems and Concepts <i class="fas fa-angle-down rotate-icon"></i>
                 </h4>
               </a>
             </div>
             <!-- Card body -->
-            <div id="collapseNineB" class="collapse" role="tabpanel" aria-labelledby="headingNineB" data-parent="#accordionEx1">
+            <div id="collapseSevenB" class="collapse" role="tabpanel" aria-labelledby="headingSevenB" data-parent="#accordionEx1">
               <div class="card-body">
-                This course is a continuation of MATH*1200. It is a theoretical course intended primarily for students who need or expect
-                to pursue further studies in mathematics, physics, chemistry, engineering and computer science. Topics include inverse functions,
-                inverse trigonometric functions, hyperbolic functions, indeterminate forms and l'Hopital's rule, techniques of integration, parametric
-                equations, polar coordinates, Taylor and Maclaurin series; functions of two or more variables, partial derivatives, and if time permits,
-                an introduction to multiple integration.
+                  This course is a study of data organization and data management principles with the
+                  perspective of analyzing applications suitable for implementation using a DBMS. This will
+                  include an analysis of several data base models, query specification methods, and query
+                  processing techniques. Overview of several related issues including concurrency control,
+                  security, integrity and recovery. Students will demonstrate concepts through project assignments.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header" role="tab" id="headingSevenB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseSevenB"
+                aria-expanded="false" aria-controls="collapseSevenB">
+                <h4 class="mb-0">
+                    CIS 4150 Software Reliability and Testing <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
+            </div>
+            <!-- Card body -->
+            <div id="collapseSevenB" class="collapse" role="tabpanel" aria-labelledby="headingSevenB" data-parent="#accordionEx1">
+              <div class="card-body">
+                  This course serves as an introduction to systematic methods of testing and verification,
+                  covering a range of static and dynamic techniques and their use within the software
+                  development process. Concepts such as defining necessary reliability, developing
+                  operational profiles, techniques to improve and predict software reliability, preparing and
+                  executing tests, black box testing, white box testing, unit testing, system testing,
+                  and integration testing will be explained.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion card -->
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header" role="tab" id="headingSevenB">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseSevenB"
+                aria-expanded="false" aria-controls="collapseSevenB">
+                <h4 class="mb-0">
+                    CIS 4500 Special Topics in Computing Science <i class="fas fa-angle-down rotate-icon"></i>
+                </h4>
+              </a>
+            </div>
+            <!-- Card body -->
+            <div id="collapseSevenB" class="collapse" role="tabpanel" aria-labelledby="headingSevenB" data-parent="#accordionEx1">
+              <div class="card-body">
+                  A variety of advanced topics within Computing Science. Subject areas discussed in any
+                  particular semester will depend upon the interests of both the students and the instructor.
               </div>
             </div>
           </div>
@@ -981,7 +1097,9 @@
         'Generic-Linked-List' : 'Generic-Linked-List' ,
         'Dribbble-Crawler' : 'Dribbble-Crawler' ,
         'surveyship': 'surveyship',
-        '134-HomepageV2': '134-HomepageV2'
+        '134-HomepageV2': '134-HomepageV2',
+        'D-D_Translator': 'D-D_Translator' ,
+        'encryptor': 'encryptor'
       }
 
       var newProject = "<div class='col-lg-5'><div class='view overlay rounded z-depth-2 mb-lg-0 mb-4'><img class='img-fluid' style='min-height: 300px; margin: auto;' src='";
