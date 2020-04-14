@@ -58,38 +58,42 @@
       margin: 0;
     }
 
-    #workExperience .row {
-        margin: 50px;
+    .vl .col-sm-4, #workExperience img {
+        min-width: 250px !important;
+        max-width: 250px !important;
+    }
+    .vl .col-sm-8 {
+        min-width: 720px !important;
+        max-width: 720px !important;
     }
 
     #workExperience img {
-        max-height: 400px;
-        max-width: 100%;
-    }
-
-    .workDesc {
-        /* margin: 50px 0; */
+        height: 290px;
+        object-fit: cover;
     }
 
     .job {
         font-weight: 500;
-        font-size: 35px;
+        font-size: 29px;
     }
 
     .jobTitle {
-        font-weight: 350;
-        font-size: 22px;
+        /* font-weight: 400; */
+        font-size: 18px;
     }
 
-    .workDesc .date {
-        font-weight: 200px;
-        font-size: 12px;
+    .JobDate {
+        position: absolute;
+        top: 50px;
+        left: -180px;
+
+        /* font-size: 18px; */
         color: grey;
     }
 
     .workDesc p {
         font-size: 18px;
-        margin: 30px 0 0 0;
+        margin: 5px 0 0 0;
     }
 
     section:nth-of-type(2n) {
@@ -115,7 +119,7 @@
       font-family: "Roboto Condensed";
       font-size: 1.5rem;
       color: rgb(72,72,72);
-  }
+    }
 
     #about p {
         margin-top: 50px;
@@ -226,6 +230,51 @@
                 user-select: none; /* Non-prefixed version, currently
                                       supported by Chrome and Opera */
     }
+
+    .timeline {
+        position: relative;
+        padding-left: 170px;
+    }
+
+    .vl {
+        border-left: 5px solid lightblue;
+        height: 400px;
+
+        padding: 5px 15px;
+        position: relative;
+    }
+
+    .vl .card {
+        position: relative;
+        top: 30px;
+        left: 20px;
+        padding: 5px 0px 0px 5px;
+
+        height: 302px;
+        width: 1000px;
+
+        border: grey 1px solid;
+        border-radius: 5px;
+
+        background-color: rgb(250, 250, 250);
+    }
+
+    .vl .dot {
+        position: absolute;
+        top: 50px;
+        left: -15px;
+
+        width: 25px;
+        height: 25px;
+
+        background-color: white;
+        border: 5px solid lightblue;
+        border-radius: 50%;
+    }
+
+    .nopadding {
+        padding: 0 !important;
+    }
   </style>
 </head>
 
@@ -274,7 +323,6 @@
     <!-- About Me title -->
     <h2 class="sectionTitle">About Me</h2>
 
-    <!-- <div class="testimonial wow fadeInUp" data-wow-delay="0.3s"> -->
     <!--Avatar-->
     <div class="avatar">
       <img src="img//backgrounds//avatar-Liam.jpeg" class="rounded-circle img-fluid" alt="My Avatar">
@@ -301,65 +349,83 @@
   <section class="text-center wow fadeInUp" data-wow-delay="0.2s" id="workExperience">
     <h2 class="sectionTitle">Work Experience</h2>
 
-    <div class="row justify-content-center">
-        <div class="col-sm-3">
-            <img src="img//jobs//iMirror.jpg" alt="Nobal Tech.">
-        </div>
-
-        <div class="col-sm-8 text-left workDesc">
-            <div class="job">
-                <a href="https://www.nobal.ca/" target="_blank">
-                    Nobal Technologies.
-                </a>
-            </div>
-            <div class="jobTitle">
-                Web Developer
-            </div>
-            <div class="date">
+    <div class="timeline">
+        <div class="vl">
+            <div class="JobDate">
                 May 2019 - Ongoing
             </div>
 
-            <p>
-                Taken lead on the complete rebuild and redesign of Nobal’s CMS (Content Management System) in order to provide both
-                developers and clients with the most seamless experience for maintaining and working with Nobal’s iMirror. Working as a
-                Full Stack software developer on the Web Development team. As early as the second week, tasks included deciding which
-                frameworks to use and creating complicated abstract systems components for the site to be built off.
-            </p>
-        </div>
-    </div>
+            <span class="dot"></span>
 
-    <hr>
+            <div class="card">
+                <div class="row">
+                    <div class="col-sm-4" style="padding: 0px 5px;">
+                        <img src="img//jobs//iMirror.jpg" alt="Nobal Tech.">
+                    </div>
 
-    <div class="row justify-content-center">
-        <div class="col-sm-3">
-            <img src="img//jobs//guelph.webp" alt="Univeristy of Guelph">
-        </div>
+                    <div class="col-sm-8 text-left workDesc">
+                        <div class="job">
+                            <a href="https://www.nobal.ca/" target="_blank">
+                                Nobal Technologies.
+                            </a>
+                        </div>
+                        <div class="jobTitle">
+                            Full Stack Web Developer
+                        </div>
 
-        <div class="col-sm-8 text-left workDesc">
-            <div class="job">
-                <a href="https://www.uoguelph.ca/" target="_blank">
-                    Univeristy of Guelph
-                </a>
+                        <hr>
+
+                        <p>
+                            Taken lead on the complete rebuild and redesign of Nobal’s CMS (Content Management System) in order to provide both
+                            developers and clients with the most seamless experience for maintaining and working with Nobal’s iMirror. Working as a
+                            Full Stack software developer on the Web Development team. As early as the second week, tasks included deciding which
+                            frameworks to use and creating complicated abstract systems components for the site to be built off.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="jobTitle">
-                Teaching Assitant
-            </div>
-            <div class="date">
+        </div>
+
+        <div class="vl">
+            <div class="JobDate">
                 Sept. 2018 - Dec. 2018
             </div>
 
-            <p>
-                Temporary Teaching Assistant contract for the course CIS 2030:
-                Structure and Application of Microcomputers. <br>
-                This experience allowed
-                me to gain hands on experience, helping to guide younger students
-                as they take on the next phase of their careers as software
-                developers working directly with dozens of students at a time in
-                labs. It also allowed me to deepen my understanding of the
-                low-level concepts involved in how computers operate.
-            </p>
-        </div>
+            <span class="dot"></span>
 
+            <div class="card">
+                <div class="row">
+                    <div class="col-sm-4" style="padding: 0px 5px;">
+                        <img src="img//jobs//motorla.jpg" alt="Univeristy of Guelph">
+                    </div>
+
+                    <div class="col-sm-8 text-left workDesc">
+                        <div class="job">
+                            <a href="https://www.uoguelph.ca/" target="_blank">
+                                Univeristy of Guelph
+                            </a>
+                        </div>
+
+                        <div class="jobTitle col-sm-6 nopadding">
+                            Teaching Assistant
+                        </div>
+
+                        <hr>
+
+                        <p>
+                            Teaching Assistant for the course CIS 2030:
+                            Structure and Application of Microcomputers. <br>
+                            This experience allowed
+                            me to gain hands on experience, helping to guide younger students
+                            as they take on the next phase of their careers as software
+                            developers working directly with dozens of students at a time in
+                            labs. It also allowed me to deepen my understanding of the
+                            low-level concepts involved in how computers operate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   </section>
 
@@ -1102,7 +1168,9 @@
         'surveyship': 'surveyship',
         '134-HomepageV2': '134-HomepageV2',
         'D-D_Translator': 'D-D_Translator' ,
-        'encryptor': 'encryptor'
+        'encryptor': 'encryptor',
+        'iQommerce---News-App':'iQommerce---News-App',
+        'openhouse.ai-frontend-test': 'openhouse.ai-frontend-test'
       }
 
       var newProject = "<div class='col-lg-5'><div class='view overlay rounded z-depth-2 mb-lg-0 mb-4'><img class='img-fluid' style='min-height: 300px; margin: auto;' src='";
@@ -1137,7 +1205,7 @@
           for (var projectIndex = 0; projectIndex < response.length; projectIndex++) {
             var icon = "img/projectImages/" + response[projectIndex].name + ".PNG";
 
-            var newProject = "<div class='row'>";
+            var newProject = "<div class='row' style='padding: 40px 0;'>";
 
             // If even index, add image to left of screen
             if (projectIndex % 2 == 0)
