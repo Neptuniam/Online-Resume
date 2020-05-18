@@ -58,44 +58,6 @@
       margin: 0;
     }
 
-    .vl .col-sm-4, #workExperience img {
-        min-width: 250px !important;
-        max-width: 250px !important;
-    }
-    .vl .col-sm-8 {
-        min-width: 720px !important;
-        max-width: 720px !important;
-    }
-
-    #workExperience img {
-        height: 290px;
-        object-fit: cover;
-    }
-
-    .job {
-        font-weight: 500;
-        font-size: 29px;
-    }
-
-    .jobTitle {
-        /* font-weight: 400; */
-        font-size: 18px;
-    }
-
-    .JobDate {
-        position: absolute;
-        top: 50px;
-        left: -180px;
-
-        /* font-size: 18px; */
-        color: grey;
-    }
-
-    .workDesc p {
-        font-size: 18px;
-        margin: 5px 0 0 0;
-    }
-
     section:nth-of-type(2n) {
       background: rgba(217, 217, 217, 0.4);
     }
@@ -129,6 +91,88 @@
        width: 20em;
        margin: auto;
        padding: 20px;
+     }
+
+     .timeline {
+         position: relative;
+         padding-left: 170px;
+         margin: auto;
+         width: 1230px;
+     }
+
+     .vl {
+         border-left: 5px solid lightblue;
+         height: 400px;
+
+         padding: 5px 15px;
+         position: relative;
+     }
+
+     .vl .card {
+         position: relative;
+         top: 30px;
+         left: 20px;
+
+         height: 300px;
+         width: 1000px;
+         padding: 5px 5px 5px 5px;
+
+         border: grey 1px solid;
+         border-radius: 5px;
+
+         background-color: rgb(250, 250, 250);
+     }
+
+     .vl .dot {
+         position: absolute;
+         top: 50px;
+         left: -15px;
+
+         width: 25px;
+         height: 25px;
+
+         background-color: white;
+         border: 5px solid lightblue;
+         border-radius: 50%;
+     }
+
+     .vl img {
+         height: 288px;
+         object-fit: cover;
+
+         min-width: 250px !important;
+         max-width: 250px !important;
+     }
+     .vl .workDesc {
+         min-width: 720px !important;
+         max-width: 720px !important;
+     }
+
+     .jobEmployer {
+         font-weight: 500;
+         font-size: 29px;
+     }
+     .jobEmployer:hover {
+         text-decoration: underline;
+     }
+
+     .jobTitle {
+         /* font-weight: 400; */
+         font-size: 18px;
+     }
+
+     .JobDate {
+         position: absolute;
+         top: 50px;
+         left: -180px;
+
+         /* font-size: 18px; */
+         color: grey;
+     }
+
+     .workDesc p {
+         font-size: 18px;
+         margin: 5px 0 0 0;
      }
 
      .educationCard {
@@ -231,48 +275,6 @@
                                       supported by Chrome and Opera */
     }
 
-    .timeline {
-        position: relative;
-        padding-left: 170px;
-    }
-
-    .vl {
-        border-left: 5px solid lightblue;
-        height: 400px;
-
-        padding: 5px 15px;
-        position: relative;
-        /* left: 10%; */
-    }
-
-    .vl .card {
-        position: relative;
-        top: 30px;
-        left: 20px;
-        padding: 5px 0px 0px 5px;
-
-        height: 302px;
-        width: 1000px;
-
-        border: grey 1px solid;
-        border-radius: 5px;
-
-        background-color: rgb(250, 250, 250);
-    }
-
-    .vl .dot {
-        position: absolute;
-        top: 50px;
-        left: -15px;
-
-        width: 25px;
-        height: 25px;
-
-        background-color: white;
-        border: 5px solid lightblue;
-        border-radius: 50%;
-    }
-
     .nopadding {
         padding: 0 !important;
     }
@@ -283,17 +285,13 @@
   <!-- Jumbotron -->
   <div class="card card-image jumbotronStyle noselect">
     <div class="text-white text-center rgba-stylish-strong py-5 px-4">
-      <div clas s="py-5">
+      <div class="py-5">
         <!-- Content -->
-        <br>
         <h1 class="card-title h2 my-4 py-2">Liam A. Jones</h1>
         <p class="mb-4 pb-2 px-md-5 mx-md-5">Web Developer</p>
         <br>
 
         <p class="mb-4 pb-2 px-md-5 mx-md-5"><span>I am </span><span  id="quoteBoard"></span></p>
-
-        <br>
-        <br>
 
         <div class="row justify-content-center">
           <div class="col-sm-2">
@@ -312,9 +310,6 @@
             </a>
           </div>
         </div>
-
-        <br>
-        <br>
       </div>
     </div>
   </div>
@@ -334,7 +329,7 @@
       <div class="col-sm-1"></div>
       <p class="col-sm-10">
         Hi! I'm Liam, a recent graduate of the Univeristy of Guelph and web developer using frameworks such as VueJS and Laravel. <br>
-        Over the last few years I have spent many hours expanding on my knowledge and skills as a programmer which is showcased down in the <i>Projects</i> section.
+        Over the last few years I have spent many hours expanding on my knowledge and skills as a programmer which is showcased down in the <a href="#projects"><i>Projects</i></a> section.
         When I'm not taking on exciting new programming projects, I enjoy playing many brain testing video games, following ARGs, hitting the gym, and spending time with friends and family.
       </p>
       <div class="col-sm-1"></div>
@@ -349,6 +344,7 @@
   <!-- Work Experience Section -->
   <section class="text-center wow fadeInUp" data-wow-delay="0.2s" id="workExperience">
     <h2 class="sectionTitle">Work Experience</h2>
+    <br>
 
     <div class="timeline">
         <div class="vl">
@@ -360,18 +356,14 @@
 
             <div class="card">
                 <div class="row">
-                    <div class="col-sm-4" style="padding: 0px 5px;">
-                        <img src="img//jobs//iMirror.jpg" alt="Nobal Tech.">
-                    </div>
+                    <img class="col-sm-4 nopadding" src="img//jobs//iMirror.jpg" alt="Nobal Tech.">
 
                     <div class="col-sm-8 text-left workDesc">
-                        <div class="job">
-                            <a href="https://www.nobal.ca/" target="_blank">
-                                Nobal Technologies.
-                            </a>
-                        </div>
+                        <a class="jobEmployer" href="https://www.nobal.ca/" target="_blank">
+                            Nobal Technologies.
+                        </a>
                         <div class="jobTitle">
-                            Full Stack Web Developer
+                            Full Stack Web Developer (VueJS / Laravel)
                         </div>
 
                         <hr>
@@ -396,16 +388,12 @@
 
             <div class="card">
                 <div class="row">
-                    <div class="col-sm-4" style="padding: 0px 5px;">
-                        <img src="img//jobs//motorla.jpg" alt="Univeristy of Guelph">
-                    </div>
+                    <img class="col-sm-4 nopadding" src="img//jobs//motorla.jpg" alt="Univeristy of Guelph">
 
                     <div class="col-sm-8 text-left workDesc">
-                        <div class="job">
-                            <a href="https://www.uoguelph.ca/" target="_blank">
-                                Univeristy of Guelph
-                            </a>
-                        </div>
+                        <a class="jobEmployer" href="https://www.uoguelph.ca/" target="_blank">
+                            Univeristy of Guelph
+                        </a>
 
                         <div class="jobTitle col-sm-6 nopadding">
                             Teaching Assistant
